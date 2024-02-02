@@ -1,5 +1,19 @@
 /* app.css */
 
+.exercises-block {
+    color:black;
+    position: relative;
+    top: 32px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.exercises-block-link{
+    color: rgb(29, 130, 29);
+    font-weight: bold;
+}
+
 #foo1 {
     font-size: medium;
     color:darkgoldenrod;
