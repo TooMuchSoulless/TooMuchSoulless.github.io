@@ -1,0 +1,14 @@
+/* app.css */
+
+#foo1 {
+    font-size: medium;
+    color:darkgoldenrod;
+}
+
+body{
+    color: var(--main-color);
+}
+
+a {
+    color: var(--anchor-color)
+}
