@@ -1,7 +1,8 @@
 /* app.css */
 
 .exercises-block {
-    color:black;
+    background-color: lightgray;
+    color:rgb(29, 130, 29);
     position: relative;
     top: 32px;
     left: 50%;
