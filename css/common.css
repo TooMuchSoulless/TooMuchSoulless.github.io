@@ -1,6 +1,23 @@
 /* common.css */
 
+@import url("my-imported-styles.css");
+
+/*помилка у фрагменті полягає у тому, що @import повинен розміщуватися перед будь-якими іншими стилями */
+
+#services {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* more styles */
+
 html {
-    --main-color: #009;
     --anchor-color: rgb(165, 13, 99);
+    --primary-text-color: #000;
+    --primary-bg-color: #fff;
+}
+
+footer {
+    --footer-text-color:#fff;
+    --footer-bg-color: #000;
 }
