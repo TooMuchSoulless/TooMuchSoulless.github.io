@@ -1,0 +1,108 @@
+.return {
+    font-size: medium;
+}
+
+/* Завдання 2*/
+h1, h2, h3 {
+    color: gray;
+}
+
+#main {
+    color: #e60202;
+}
+
+.h2 {
+    color: red;
+}
+
+.heading {
+    color: green;
+}
+
+/* Завдання 3 */
+ul > li {
+    font-weight: bold;
+}
+
+section > p {
+    color: red;
+}
+
+/* ні, колір тексту <p> всередині елемента <div> не зміниться, бо визначений стиль section > p буде застосовуватися лише до параграфів, які вкладені в <section>, а не всіх параграфів всередині будь-яких інших елементів */
+
+section p{
+    font-size: 32px;
+}
+
+/* Завдання 4 */
+h2:first-of-type {
+    color: indigo;
+}
+
+p.first a{
+    color: green;
+}
+
+p .first a {
+    color: green;
+}
+
+div ~ p {
+    color: salmon;
+}
+
+/* Завдання 5*/
+/* Black:
+1. #000000
+2. rgb(0, 0, 0)
+3. rgb(0%, 0%, 0%)
+4. rgba(0, 0, 0, 1)
+
+Blue:
+1. #0000FF
+2. rgb(0, 0, 255)
+3. rgb(0%, 0%, 100%)
+4. rgba(0, 0, 255, 1)
+
+Green:
+1. #008000
+2. rgb(0, 128, 0)
+3. rgb(0%, 50%, 0%)
+4. rgba(0, 128, 0, 1)
+
+Red:
+1. #FF0000
+2. rgb(255, 0, 0)
+3. rgb(100%, 0%, 0%)
+4. rgba(255, 0, 0, 1)
+
+White:
+1. #FFFFFF
+2. rgb(255, 255, 255)
+3. rgb(100%, 100%, 100%)
+4. rgba(255, 255, 255, 1)
+
+Yellow:
+1. #FFFF00
+2. rgb(255, 255, 0)
+3. rgb(100%, 100%, 0%)
+4. rgba(255, 255, 0, 1)
+*/
+
+/* Завдання 6 */
+.translucent-box {
+    background: hsla(0deg, 100%, 50%, 0.5)
+}
+
+/* Завдання 7 */
+html {
+    font-size: 100%;
+}
+
+body {
+    font-size: 140%;
+}
+
+h1 {
+    font-size: 240%;
+}
