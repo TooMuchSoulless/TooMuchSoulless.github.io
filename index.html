@@ -6,9 +6,11 @@
     <title>My personal site</title>
 
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-
+    <!-- Для роботи на лекціях -->
     <link rel="stylesheet" href="./css/app.css">
+
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
 
     <style>
 
@@ -19,7 +21,7 @@
         color: rebeccapurple;
     }
 
-    h1{
+    h3 {
         color: rgb(112, 45, 103);
         font-size: xx-large;
     }
@@ -33,7 +35,7 @@
     <section>
 
         <div class="exercises-block">
-            <h3>&dArr; Мої домашні завдання тут &dArr;</h3>
+            <h2>&dArr; Мої домашні завдання тут &dArr;</h2>
             <a href="./exercises/index.html" class="exercises-block-link">The Exercises</a>
         </div>
 
@@ -41,9 +43,9 @@
     <hr/>
        
     <!--page header-->
-        <header>
+        <header class="page-header">
             <!--brand-->
-            <strong>Shopaholic</strong>
+            <a href="index.html" class="brand">Shopaholic</a>
             <!--navigation-->
             <nav>
                 <a href="./index.html">Home page</a>
@@ -58,33 +60,66 @@
     <!--hero-->
         <section id="hero">
             <div class="container">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
                 <h1>Hello world!</h1>
                 <a href="#!" class="btn">Browse Collection</a>
             </div>
         </section>
 
-    
-    <h2>Hello world!</h2>
-    <h3>Hello world!</h3>
-    <h6>Hello world!</h6>
-
-    <u>underline</u>
-    <i>italic</i>
-    <b>bold</b>
-
-    <em>emohases</em>
-    <strong>strong</strong>
-
     <!--main content-->
     <main>
+
+        <div>
+
+            <h3>Lecture 2</h3>
+
+            <h4>Hello world!</h4>
+            <h5>Hello world!</h5>
+            <h6>Hello world!</h6>
         
-        <p hidden>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus dolor ut! Dolorum ipsam vitae debitis quas, numquam dicta quae et dignissimos repellat nam vero libero ullam laudantium reprehenderit! Odio! </p>
-        <foo id="foo" class="foo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias accusantium consequatur quisquam cum, eos harum obcaecati perferendis. Sed recusandae quas deleniti fuga, cumque nostrum debitis rem, aliquid ut, voluptate commodi.</foo>
-        <bar style="color: rgb(198, 129, 223);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex totam eos, dolorum eaque maxime numquam doloremque aperiam fugiat tenetur maiores. Placeat, eveniet maxime? Architecto eaque veniam voluptatem, fuga quasi nostrum.</bar>
-        <span id="foo1" class="foo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nemo sunt dolor commodi, veniam id? Deserunt quas nostrum unde explicabo quisquam dolorum dignissimos consequatur accusamus doloremque iusto. Ipsam, iste asperiores.</span>       
-        <iframe src="https://en.m.wikipedia.org/wiki/HTML" title="Wikipedia page for the HTML language"></iframe>
-    
+            <u>underline</u>
+            <i>italic</i>
+            <b>bold</b>
+        
+            <em>emohases</em>
+            <strong>strong</strong>
+
+        </div>
+
+        <div>
+
+            <h3>Lecture 3</h3>
+
+            <p hidden>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus dolor ut! Dolorum ipsam vitae debitis quas, numquam dicta quae et dignissimos repellat nam vero libero ullam laudantium reprehenderit! Odio! </p>
+            <foo id="foo" class="foo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias accusantium consequatur quisquam cum, eos harum obcaecati perferendis. Sed recusandae quas deleniti fuga, cumque nostrum debitis rem, aliquid ut, voluptate commodi.</foo>
+            <bar style="color: rgb(198, 129, 223);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex totam eos, dolorum eaque maxime numquam doloremque aperiam fugiat tenetur maiores. Placeat, eveniet maxime? Architecto eaque veniam voluptatem, fuga quasi nostrum.</bar>
+            <span id="foo1" class="foo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nemo sunt dolor commodi, veniam id? Deserunt quas nostrum unde explicabo quisquam dolorum dignissimos consequatur accusamus doloremque iusto. Ipsam, iste asperiores.</span>       
+            <iframe src="https://en.m.wikipedia.org/wiki/HTML" title="Wikipedia page for the HTML language"></iframe>
+
+        </div>
+        
+        
+        <div>
+
+            <h3>Lecture 4</h3>
+
+            <p class="named">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="rgb">Lorem ipsum dolor sit amet consectetur adipisicing elit.<span>Expedita modi, deleniti possimus tenetur ipsam asperiores praesentium, numquam non assumenda ex laudantium voluptatem, temporibus neque nobis ipsa? Libero, optio? Non, labore.</span></p>
+            <p class="hex">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="transp">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="hsl">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            
+            <div class="nesting">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <div class="is">
+                    Quis sunt mollitia vel. Amet consectetur aliquid nisi minus recusandae vero reprehenderit unde cumque molestiae soluta.
+                    <div class="awesome">
+                        Deleniti exercitationem nisi qui quia deserunt.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </main>
 
     <!--divider-->
@@ -94,9 +129,10 @@
     <section id="services"></section>
 
     <!--page footer-->
-    <footer>
+    <footer class="page-footer">
  
         <section>
+
             <div>
 
                 <h2>About</h2>

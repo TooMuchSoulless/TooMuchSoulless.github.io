@@ -1,29 +1,44 @@
 /* app.css */
 
-.exercises-block {
-    background-color: lightgray;
-    color:rgb(29, 130, 29);
-    position: relative;
-    top: 32px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+.named {
+    color: aliceblue;
+    background-color: indianred;
+    font-size: 1.5rem;
 }
 
-.exercises-block-link{
-    color: rgb(29, 130, 29);
-    font-weight: bold;
+.rgb {
+    color:rgb(200, 100, 0);
+    font-size: 0.5rem;
 }
 
-#foo1 {
-    font-size: medium;
-    color:darkgoldenrod;
+.rgb span {
+    font-size: 3em;
 }
 
-body{
-    color: var(--main-color);
+.hex {
+    /* 1 2 3 4 5 6 7 8 9 a b c d e f */
+    color: #ffff00;
+    font-size: 5ex;
 }
 
-a {
-    color: var(--anchor-color)
+.transp {
+   /* color: rgba(0, 0, 255, 0.5); */
+   color: rgb(0 0 255 / 0.5);
+   font-size: 4.5ch;
+}
+
+.hsl {
+    color: hsl(9deg, 100%, 50%);
+    /* font-size: 0.5in; */
+    font-size: 14vh;
+}
+
+.nesting {
+    color: hotpink;
+    > .is {
+        color: rebeccapurple;
+        > .awesome {
+        color: deeppink;
+        }
+    }
 }

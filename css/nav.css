@@ -1,0 +1,9 @@
+/* nav.css */
+
+.page-header {
+    background-color: white;
+}
+
+.page header .brand {
+    color: var(--anchor-active-color);
+}

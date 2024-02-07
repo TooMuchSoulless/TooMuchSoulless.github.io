@@ -1,0 +1,20 @@
+/* footer.css */
+
+/*Робота на лекції 4:
+.page-footer {
+    color: #bbb;
+}
+
+.page-footer ul {
+    list-style: none;
+}
+
+.page-footer ul > li > a {
+    color:#ddd;
+}
+*/
+
+footer {
+    color: #fff;
+    background: #000;
+}

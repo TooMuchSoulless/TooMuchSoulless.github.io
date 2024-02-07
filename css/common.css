@@ -1,23 +1,58 @@
 /* common.css */
 
+/* * {
+  margin: 0;
+}*/
+
+/*Вправи з домашнього завдання 3:
+помилка у фрагменті полягає у тому, що @import повинен розміщуватися перед будь-якими іншими стилями
 @import url("my-imported-styles.css");
-
-/*помилка у фрагменті полягає у тому, що @import повинен розміщуватися перед будь-якими іншими стилями */
-
 #services {
   margin: 0px;
   padding: 0px;
-}
-
-/* more styles */
-
-html {
-    --anchor-color: rgb(165, 13, 99);
-    --primary-text-color: #000;
-    --primary-bg-color: #fff;
-}
+} 
 
 footer {
-    --footer-text-color:#fff;
-    --footer-bg-color: #000;
+  --footer-text-color:#fff;
+  --footer-bg-color: #000;
+}*/
+
+html {
+  --anchor-color: rgb(165, 13, 99);
+  --anchor-active-color: rgb(81, 31, 26);
+  --primary-text-color: #000;
+  --primary-bg-color: #fff;
+}
+
+.exercises-block {
+  background-color: lightgray;
+  color:rgb(29, 130, 29);
+  position: relative;
+  top: 32px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.exercises-block-link{
+  color: rgb(29, 130, 29);
+  font-weight: bold;
+}
+
+#foo1 {
+  font-size: medium;
+  color:darkgoldenrod;
+}
+
+body {
+  color: var(--primary-text-color);
+  background: var(--primary-bg-color);
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+a {
+  color: var(--anchor-color)
 }
