@@ -10,10 +10,17 @@
 
     <!-- Для роботи на лекціях -->
     <link rel="stylesheet" href="./css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
 
     @import url('./css/common.css');
+
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
 
     #foo {
         font-size: x-large;
@@ -49,13 +56,23 @@
 
         <!--navigation-->
         <nav>
+
             <a href="./index.html">Home page</a>
             <a href="./catalog.html">Catalog</a>
             <a href="./blog.html">Blog</a>
             <a href="./aboutit.html">About</a>
             <a href="./contact.html">Contact</a>
             <a href="https://www.google.com.ua" target="_blank">Google</a>
+
         </nav>
+
+        <hav>
+
+            <a href="#" class="far fa-heart"></a>
+            <a href="#" class="fas fa-dolly-flatbed"></a>
+            <a href="#" class="far fa-user"></a>
+
+        </hav>
 
     </header>
 
@@ -125,6 +142,37 @@
 
         </div>
 
+        <div class="container">
+
+            <header>
+
+                <h3>Lecture 5</h3>
+                <h4>Our <span>products</span></h4>
+
+            </header>
+
+            <div class="product-container">
+
+                <article class="product">
+
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+
+                    
+                <div class="image"></div>
+                <div class="content">
+                    <h3>Product name</h3>
+                </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
     </main>
 
     <!--divider-->
@@ -176,12 +224,27 @@
 
         </section>
 
-        <!-- footer legal -->
-        <section>
+        <section class="footer-social">
 
-            <a href="#">Terms &amp; Conditions</a>
-            <a href="#">Privacy Policy</a>
-            &copy; 2024 Copyright Shopaholic Inc.
+            <ul class="footer-social-list">
+                <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href=""><i class="fab fa-github"></i></a></li>
+                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                <li><a href=""><i class="fab fa-youtube"></i></a></li>
+            </ul>
+
+        </section>
+
+        <!-- footer legal -->
+        <section class="footer-legal">
+
+            <ul>
+                <li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                &copy; 2024 Copyright Shopaholic Inc.
+            </ul>
 
         </section>
 

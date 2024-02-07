@@ -1,1 +1,9 @@
 /* catalog.css */
+
+main .container h2 > span {
+    color: var(--anchor-active-color)
+}
+
+main .container h3 {
+    text-transform: uppercase;
+}

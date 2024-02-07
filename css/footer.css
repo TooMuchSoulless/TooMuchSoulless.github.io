@@ -18,3 +18,11 @@ footer {
     color: #fff;
     background: #000;
 }
+
+.footer-legal {
+    background-color: #000;
+}
+
+.footer-legal > ul > li > a {
+    color: #fff;
+}
