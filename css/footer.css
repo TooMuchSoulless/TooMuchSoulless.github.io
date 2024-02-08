@@ -1,28 +1,17 @@
 /* footer.css */
 
-/*Робота на лекції 4:
-.page-footer {
-    color: #bbb;
-}
-
-.page-footer ul {
-    list-style: none;
-}
-
-.page-footer ul > li > a {
-    color:#ddd;
-}
-*/
-
 footer {
     color: #fff;
     background: #000;
 }
 
 .footer-legal {
-    background-color: #000;
+    background: rgb(88, 88, 88);
+    > ul > li {
+    list-style: none;
+    }
 }
 
 .footer-legal > ul > li > a {
-    color: #fff;
+    color: var(--anchor-active-color);
 }
