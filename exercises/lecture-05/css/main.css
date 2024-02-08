@@ -1,14 +1,18 @@
+.return {
+    font-size: medium;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
 }
 
 /* Завдання 3 */
 div {
-    font-size: 1em;
+    font-size: 1.6em;
 }
 
 div > span > span {
-    font-size: 1.6em;
+    font-size: 1.60em;
 }
 
 /* Завдання 4 */
