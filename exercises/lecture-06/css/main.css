@@ -1,0 +1,83 @@
+/* Завдання 2 */
+ul > li > a:link {
+    color: indigo;
+}
+
+ul > li > a:visited {
+    color: gold;
+}
+
+ul > li > a:hover {
+    color: salmon;
+}
+
+ul > li > a:active {
+    color: red;
+}
+
+ul > li > a:focus {
+    color: orange;
+}
+
+/* Завдання 3 */
+input:in-range {
+    background-color: rgba(0, 255, 0, 0.25) ;
+}
+
+input:out-of-range {
+    background-color: rgba(255, 0, 0, 0.25);
+}
+
+/* Завдання 4 */
+.ex-4 > li:first-child {
+    color: orange;
+}
+
+/* Завдання 5 */
+.ex-5 :first-of-type {
+    color: orange;
+}
+
+/* Завдання 6 */
+.ex-6 :last-of-type {
+    color: orange;
+}
+
+/* Завдання 7 */
+.ex-7 > li:not(.first-item){
+    color: orange
+}
+
+.ex-7 > li:not(.first-item):not(:last-of-type) {
+    background-color: yellow;
+    color: black;
+}
+
+/* Завдання 8 */
+ol :nth-child(2) {
+    color: orange;
+}
+
+ol :nth-child(even) {
+    color: orange;
+}
+
+ol :nth-child(2n+6) {
+    color: orange;
+}
+
+/* Завдання 9 */
+h1.ua::before {
+    content: "Слава ";
+}
+
+/* Завдання 10 */
+h2.hero::after {
+    content: "Слава!";
+}
+
+/* Завдання 11 */
+p.cont::before {
+    content: "\0A7";
+    padding-right: 0.2em;
+}

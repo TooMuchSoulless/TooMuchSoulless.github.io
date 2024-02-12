@@ -32,10 +32,10 @@
     }
 }
 
-ul.categories a:hover {
+/*ul.categories a:hover {
     color: var(--anchor-active-color);
     text-decoration: underline;
-}
+}*/
 
 ul.categories li:nth-child(even) {
     background-color: rgb(230, 213, 227);
