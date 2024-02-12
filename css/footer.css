@@ -1,17 +1,68 @@
 /* footer.css */
 
-footer {
-    color: #fff;
-    background: #000;
-}
+.page-footer {
+    --footer-background-color: #555;
+    --footer-social-background-color: #333;
+    --footer-legal-background-color: rgb(88, 88, 88);
 
-.footer-legal {
-    background: rgb(88, 88, 88);
-    > ul > li {
-    list-style: none;
+    --footer-a-color: #f8d3d3 ;
+    --footer-light-color: rgb(157, 0, 89);
+    --footer-a-font-size: 0.85rem;
+
+    > .footer-main { 
+        color: #fff;
+        background: #000;
+        > .footer-main-item {
+            > ul > li {
+                list-style: none;
+            }
+            > ul > li > a {
+                color: var(--footer-a-color);
+                font-size: var(--footer-a-font-size);
+            }
+            > ul > li > a:hover {
+                color: var(--anchor-active-color);
+            }
+            > ul > li > a:hover::before {
+                color: var(--anchor-active-color);
+                font-weight: 900;
+                content: "\f00c";
+                font-family: 'Font Awesome 5 Free';
+                margin-right: 3px;
+            }
+            > .footer-title {
+                font-size: 1.1rem;
+                color: var(--footer-light-color);
+            }
+        }
     }
-}
 
-.footer-legal > ul > li > a {
-    color: var(--anchor-active-color);
+    > .footer-social {
+        background-color: var(--footer-social-background-color);
+        > .footer-social-list-unstyled > li > a > i {
+            font-size: 1.25rem;
+            color: var(--footer-a-color);
+        }
+        > .footer-social-list-unstyled > li > a:hover > i {
+            color: var(--anchor-active-color);
+        }
+    }
+
+    .footer-legal {
+        background: var(--footer-legal-background-color);
+
+        > ul.footer-legal-list {
+        
+            > li {
+                white-space: nowrap;
+                list-style: none;
+            }
+            > li > a {
+                color: var(--footer-light-color);
+            }
+            > li > a:hover {
+                color: var(--footer-a-color);
+            }
+       }
+    }
 }

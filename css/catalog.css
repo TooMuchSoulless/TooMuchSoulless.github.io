@@ -1,9 +1,42 @@
 /* catalog.css */
 
-main .container h2 > span {
-    color: var(--anchor-active-color)
+.product-container {
+    > .product {
+        > .icons {
+            > a {
+                background-color: #fff;
+                color: var(--anchor-color);
+            }
+            > a:hover {
+                background-color: var(--anchor-active-color);
+                color: #fff; 
+            }
+        }
+
+        > .image {
+        }
+
+        > .content {
+            > h3 {
+
+            }
+            > .price {
+                font-weight: 600;
+                color: var(--anchor-active-color);
+            }
+            > .price::before {
+                color: var(--anchor-active-color);
+                content: var(--currency-symbol);
+            }
+        }
+    }
 }
 
-main .container h3 {
-    text-transform: uppercase;
+ul.categories a:hover {
+    color: var(--anchor-active-color);
+    text-decoration: underline;
+}
+
+ul.categories li:nth-child(even) {
+    background-color: rgb(230, 213, 227);
 }

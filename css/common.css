@@ -19,9 +19,10 @@
 }*/
 
 /*Вправа 8 з домашнього завдання 5 */
-html {
+:root {
   --anchor-color: rgb(165, 13, 99);
   --anchor-active-color: rgb(76, 11, 56);
+  --currency-symbol: "\20B4";
   --primary-text-color: #000;
   --primary-bg-color: #fff;
   --primary-font-family: 'Roboto', sans-serif;
