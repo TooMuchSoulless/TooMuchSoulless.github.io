@@ -45,10 +45,10 @@
   font-weight: bold;
 }
 
-#foo1 {
+/*#foo1 {
   font-size: medium;
   color:darkgoldenrod;
-}
+}*/
 
 body {
   color: var(--primary-text-color);

@@ -1,6 +1,7 @@
 /* app.css */
 
-.named {
+/* Lecture 4 */
+/*.named {
     color: aliceblue;
     background-color: indianred;
     font-size: 1.5rem;
@@ -16,20 +17,17 @@
 }
 
 .hex {
-    /* 1 2 3 4 5 6 7 8 9 a b c d e f */
     color: #ffff00;
     font-size: 5ex;
 }
 
 .transp {
-   /* color: rgba(0, 0, 255, 0.5); */
    color: rgb(0 0 255 / 0.5);
    font-size: 4.5ch;
 }
 
 .hsl {
     color: hsl(9deg, 100%, 50%);
-    /* font-size: 0.5in; */
     font-size: 14vh;
 }
 
@@ -41,4 +39,41 @@
         color: deeppink;
         }
     }
+}
+*/
+
+.svg-icon {
+    > .svg-icon-item {
+        width: 48px;
+        height: 48px;
+        vertical-align: text-bottom;
+        stroke: currentColor;
+        stroke-width: 2;
+    }
+}
+
+.divider {
+    background-image: url(../images/divider-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.gradient {
+    font-size: 2vw;
+    font-weight: 700;
+    background: linear-gradient(to right,
+        rgb(25, 76, 192), 
+        rgb(196, 26, 3) 20%, 
+        rgb(236, 190, 6) 40%, 
+        rgb(25, 76, 192) 60%, 
+        rgb(3, 116, 8) 80%, 
+        rgb(196, 26, 3));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 }
