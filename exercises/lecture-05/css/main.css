@@ -4,20 +4,21 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    /*font-size: 16px;*/
 }
 
 /* Завдання 3 */
 div {
-    font-size: 1.6em;
+    font-size: 1em;
 }
 
 div > span > span {
-    font-size: 1.60em;
+    font-size: 1.6em;
 }
 
 /* Завдання 4 */
 strong {
-    font-size: 1em;
+    font-size: 1.6rem;
 }
 
 /* Завдання 5 */

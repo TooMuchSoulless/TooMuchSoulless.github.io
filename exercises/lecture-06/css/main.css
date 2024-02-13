@@ -1,21 +1,21 @@
 /* Завдання 2 */
-ul > li > a:link {
+a:link {
     color: indigo;
 }
 
-ul > li > a:visited {
+a:visited {
     color: gold;
 }
 
-ul > li > a:hover {
+a:hover {
     color: salmon;
 }
 
-ul > li > a:active {
+a:active {
     color: red;
 }
 
-ul > li > a:focus {
+a:focus {
     color: orange;
 }
 
