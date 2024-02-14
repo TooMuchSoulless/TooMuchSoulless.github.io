@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 7 Графічні формати</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+
+        /* Завдання 1 */
+        .negative {
+            padding: 3rem 0;
+            margin: 1rem 0;
+            background: linear-gradient(
+                to left, 
+                rgb(199, 251, 255) -50%,
+                rgb(140, 192, 208) -10%,
+                rgb(89, 135, 161) 0%,
+                rgb(15, 32, 66) 100%,
+                rgb(5, 4, 42) 150%);
+        }
+
+        .percents {
+            padding: 3rem 0;
+            margin: 1rem 0;
+            background: linear-gradient(
+                to bottom,
+                rgb(170, 233, 170) 2em,
+                rgb(96, 142, 91) 4em,
+                rgb(78, 120, 73) 8em,
+                rgb(61, 100, 55) 16em,
+                rgb(45, 80, 39) 32em,
+                rgb(29, 60, 23) 64em,
+                rgb(14, 42, 4) 128em);
+        }
+
+        .radial {
+            padding: 3rem 0;
+            margin: 1rem 0;
+            background: radial-gradient(ellipse at top, orange, transparent), 
+            radial-gradient(ellipse at bottom, red, transparent);
+        }
+
+    </style>
+
+</head>
+<body class="body">
+    
+    <div class="return">
+        
+        <a href="../index.html">Повернутись назад</a>
+        <hr/>
+
+    </div>
+
+    <!-- Завдання 1 -->
+    <h1>Gradient Text Glow</h1>
+
+    <div class="percents">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cum magnam quae adipisci minima illum porro eius ipsa rem. Sequi eaque facere necessitatibus fugiat rerum facilis reprehenderit numquam dignissimos itaque!
+    </div>
+
+    <div class="negative">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cum magnam quae adipisci minima illum porro eius ipsa rem. Sequi eaque facere necessitatibus fugiat rerum facilis reprehenderit numquam dignissimos itaque!
+    </div>
+
+    <div class="radial">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cum magnam quae adipisci minima illum porro eius ipsa rem. Sequi eaque facere necessitatibus fugiat rerum facilis reprehenderit numquam dignissimos itaque!
+    </div>
+
+    <!-- Завдання 2 -->
+    <svg width="200" height="200">
+        <rect x="20" y="20" width="100" height="100" fill="lightgray" stroke="#1c87c9" stroke-width="4"/>
+    </svg>
+
+    <!-- Завдання 3 -->
+    <svg width="200" height="200">
+        <circle cx="100" cy="70" r="60" fill="lightgray" stroke="red" stroke-width="4"/>
+    </svg>
+
+    <!-- Завдання 4 -->
+    <svg width="200" height="200">
+        <circle cx="100" cy="100" r="80" fill="lightpink" stroke="darkgray" stroke-width="4"/>
+        <line x1="100" y1="100" x2="160" y2="100" stroke="black" stroke-width="3"/>
+        <line x1="100" y1="100" x2="100" y2="30" stroke="black" stroke-width="2"/>
+    </svg>
+
+    <!-- Завдання 5 -->
+    <svg width="150" height="150">
+        <polygon points="75,10 90,50 140,50 105,75 120,120 75,95 30,120 45,75 10,50 60,50" fill="gold" stroke="orange" stroke-width="2"/>
+    </svg>
+
+</body>
+</html>
