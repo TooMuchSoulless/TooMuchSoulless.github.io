@@ -39,11 +39,11 @@
 
     > .footer-social {
         background-color: var(--footer-social-background-color);
-        > .footer-social-list-unstyled > li > a > i {
+        > .footer-social-list-unstyled .social-media {
             font-size: 1.25rem;
             color: var(--footer-a-color);
         }
-        > .footer-social-list-unstyled > li > a:hover > i {
+        > .footer-social-list-unstyled a:hover .social-media {
             color: var(--anchor-active-color);
         }
     }

@@ -96,13 +96,15 @@ Yellow:
 
 /* Завдання 7 */
 html {
-    font-size: 100%;
+    font-size: 1.4em;
 }
 
 body {
-    font-size: 140%;
+    font-size: 1.4em;
+    /*збільшити на 40%*/
 }
 
 h1 {
-    font-size: 240%;
+    font-size: 1.96em;
+    /*збільшити на 140%*/
 }

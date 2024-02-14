@@ -44,11 +44,7 @@
 
 .svg-icon {
     > .svg-icon-item {
-        width: 48px;
-        height: 48px;
         vertical-align: text-bottom;
-        stroke: currentColor;
-        stroke-width: 2;
     }
 }
 
