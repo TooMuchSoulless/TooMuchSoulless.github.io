@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8 Блокова модель документа</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+
+        /*Завдання 1*/
+        .box {
+            padding: 10px 20px 25px 20px;
+            margin: 25px 20px;
+        }
+
+        /*Загальну ширину розраховуємо за формулою: margin-right + border-right + padding-right + width + padding-left + border-left + margin-left*/
+        /*Загальну висоту розраховуємо за формулою: margin-top + border-top + padding-top + height + padding-bottom + border-bottom + margin-bottom*/
+
+
+        /*Завдання 2*/
+        .box-1 {
+            width: 300px;
+            padding: 10px; /*20px*/
+            border: dashed 2px green; /*4px*/
+        }
+        /*ширина .box-1 (.box) = 324px*/
+
+        /*Завдання 3*/
+        .first-box{
+            width: 200px; /*ширина*/
+            height: 100px; /*висота*/
+            border: 8px solid blue; /*16px*/
+            padding: 20px; /*40px*/
+            background: yellow;
+        }
+        /*ширина .first-box = 256px*/
+        /*висота .first-box = 156px*/
+
+        /* Завдання 4*/
+        .second-box{
+            width: 200px; /*ширина*/
+            height: 100px; /*висота*/
+            border: 8px solid blue; /*16px*/
+            background: yellow;
+        }
+        /*ширина .second-box = 216px*/
+        /*висота .second-box = 116px*/
+
+        /*Завдання 5*/
+        .box-3 {
+            box-sizing: content-box;
+            width: 200px;
+            border: 8px solid blue; /*16px*/
+            padding: 20px; /*40px*/
+            background: yellow;
+        }
+        /*ширина .box-3 (div) = 256px*/
+
+        /*Завдання 6*/
+        .box-4 {
+            box-sizing: border-box;
+            width: 200px;
+            border: 8px solid blue; /*16px*/
+            padding: 20px; /*40px*/
+            background: yellow;
+        }
+        /*ширина контенту .box-4 (div) = 144px*/
+
+        /*Завдання 7*/
+        .box-5 {
+            border: 10px dotted black;
+            padding: 15px;
+            background: lightblue;
+        }
+
+        #example1 {
+            background-clip: border-box;
+        }
+
+        #example2 {
+            background-clip: padding-box;
+        }
+
+        #example3 {
+            background-clip: content-box;
+        }
+
+        /*Завдання 8*/
+        h1 {
+            display: inline-block;
+            inline-size: min-content;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="return">
+        
+        <a href="../index.html">Повернутись назад</a>
+        <hr/>
+
+    </div>
+
+    <!--Завдання 1-->
+    <div class="box"></div>
+
+    <!--Завдання 2-->
+    <div class="box-1"></div>
+
+    <!--Завдання 3-->
+    <div class="first-box"></div>
+
+    <!--Завдання 4-->
+    <div class="second-box"></div>
+
+    <!--Завдання 5-->
+    <div class="box-3"></div>
+
+    <!--Завдання 6-->
+    <div class="box-4"></div>
+
+    <!--Завдання 7-->
+    <div id="example1" class="box-5">
+        <p>Правило для example1: фон всередині елемента має простягатися за межі рамки.</p>
+    </div>
+
+    <div id="example2" class="box-5">
+        <p>Правило для example2: фон всередині елемента має простягатися до внутрішнього краю рамки.</p>
+    </div>
+
+    <div id="example3" class="box-5">
+        <p>Правило для example3: фон всередині елемента має простягатися до краю поля вмісту.</p>
+    </div>
+
+    <!--Завдання 8-->
+    <h1><span>Awesome article</span></h1>
+    
+</body>
+</html>
