@@ -39,10 +39,18 @@
 
     > .footer-social {
         background-color: var(--footer-social-background-color);
-        > .footer-social-list-unstyled .social-media {
-            font-size: 1.25rem;
-            color: var(--footer-a-color);
-        }
+        text-align: center;
+        > .footer-social-list-unstyled {
+            li {
+                display: inline-block;
+                a .social-media {
+                    font-size: 1.25rem;
+                    color: var(--footer-a-color);
+                    margin-right: 1rem;
+                }
+            }
+        } 
+        
         > .footer-social-list-unstyled a:hover .social-media {
             color: var(--anchor-active-color);
         }

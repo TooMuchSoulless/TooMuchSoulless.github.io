@@ -11,6 +11,8 @@
 /* Вправа 7 з домашнього завдання 5 */
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css);
 
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css);
+
 /* Вправа 8 з домашнього завдання 3:
 body {
     color: var(--primary-text-color);
