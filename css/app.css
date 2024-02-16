@@ -1,47 +1,5 @@
 /* app.css */
 
-/* Lecture 4 */
-/*.named {
-    color: aliceblue;
-    background-color: indianred;
-    font-size: 1.5rem;
-}
-
-.rgb {
-    color:rgb(200, 100, 0);
-    font-size: 0.5rem;
-}
-
-.rgb span {
-    font-size: 3em;
-}
-
-.hex {
-    color: #ffff00;
-    font-size: 5ex;
-}
-
-.transp {
-   color: rgb(0 0 255 / 0.5);
-   font-size: 4.5ch;
-}
-
-.hsl {
-    color: hsl(9deg, 100%, 50%);
-    font-size: 14vh;
-}
-
-.nesting {
-    color: hotpink;
-    > .is {
-        color: rebeccapurple;
-        > .awesome {
-        color: deeppink;
-        }
-    }
-}
-*/
-
 .svg-icon {
     > .svg-icon-item {
         vertical-align: text-bottom;

@@ -35,23 +35,20 @@
 
 .exercises-block {
   background-color: lightgray;
-  color:rgb(29, 130, 29);
+  color:rgb(1, 16, 1);
   position: relative;
   top: 32px;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  margin-top: 4rem;
+  border: 2px solid #b5b5b5;
 }
 
 .exercises-block-link{
-  color: rgb(29, 130, 29);
+  color: rgb(255, 53, 161);
   font-weight: bold;
 }
-
-/*#foo1 {
-  font-size: medium;
-  color:darkgoldenrod;
-}*/
 
 body {
   color: var(--primary-text-color);

@@ -1,11 +1,31 @@
 /* catalog.css */
 
+.bg-sale {
+    background-color: red;
+    color: #fff;
+}
+
 .product-container {
     > .product {
+        width: 12.5rem;
+        overflow: hidden;
+        position: relative;
+
         > .icons {
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+            z-index: -10;
+            
             > a {
                 background-color: #fff;
                 color: var(--anchor-color);
+                display: inline-block;
+                margin-top: 0.5rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                line-height: 1.5rem;
+                text-align: center;
             }
             > a:hover {
                 background-color: var(--anchor-active-color);
@@ -14,11 +34,32 @@
         }
 
         > .image {
+            object-fit: cover;
+            > .badge {
+                display: inline-block;
+                text-align: center;
+                vertical-align: baseline;
+                font-size: 0.75rem;
+                padding: 0.35rem 0.45rem;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 10;
+            }
         }
 
         > .content {
+            padding: 0.5rem;
             > h3 {
-
+                padding-bottom: 0.5rem;
+                text-align: center;
+                font-size: 1rem;
+                /*щоб сховати назву товару 1.0*/
+                /*position: absolute;
+                bottom: -3rem;
+                left: 0;
+                right: 0;
+                z-index: 10;*/
             }
             > .price {
                 font-weight: 600;
@@ -28,7 +69,21 @@
                 color: var(--anchor-active-color);
                 content: var(--currency-symbol);
             }
+            > .price:nth-of-type(1) {
+                float: left;
+                text-decoration: line-through;
+            }
+            > .price:nth-of-type(2) {
+                float: right;
+            }
         }
+    }
+    /*щоб сховати назву товару 2.0/
+    /*> .product:hover h3 {
+        bottom: 2rem;
+    }*/
+    .product:hover .icons {
+        z-index: 10;
     }
 }
 
