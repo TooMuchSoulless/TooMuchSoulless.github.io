@@ -1,18 +1,22 @@
 /* footer.css */
 
 .page-footer {
-    --footer-background-color: #555;
-    --footer-social-background-color: #333;
+    --footer-background-color: #0e0e0e;
+    --footer-social-background-color: #333333;
     --footer-legal-background-color: rgb(88, 88, 88);
 
-    --footer-a-color: #f8d3d3 ;
+    --footer-a-color: #f8d3d3;
     --footer-light-color: rgb(157, 0, 89);
-    --footer-a-font-size: 0.85rem;
+    --footer-a-font-size: 1rem;
 
-    > .footer-main { 
-        color: #fff;
-        background: #000;
-        > .footer-main-item {
+    & .footer-main { 
+        background: var(--footer-background-color);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 1.25rem 1.875rem;
+
+        & .footer-main-item {
             > ul > li {
                 list-style: none;
             }
@@ -32,18 +36,22 @@
             }
             > .footer-title {
                 font-size: 1.1rem;
+                text-align: center;
                 color: var(--footer-light-color);
             }
         }
     }
 
-    > .footer-social {
+    & .footer-social {
         background-color: var(--footer-social-background-color);
         text-align: center;
-        > .footer-social-list-unstyled {
-            li {
+        display: flex;
+        justify-content: center;
+
+        & .footer-social-list-unstyled {
+            > li {
                 display: inline-block;
-                a .social-media {
+                > a .social-media {
                     font-size: 1.25rem;
                     color: var(--footer-a-color);
                     margin-right: 1rem;
@@ -56,20 +64,25 @@
         }
     }
 
-    .footer-legal {
+    & .footer-legal {
         background: var(--footer-legal-background-color);
-
+    
         > ul.footer-legal-list {
-        
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+
             > li {
                 white-space: nowrap;
                 list-style: none;
             }
             > li > a {
-                color: var(--footer-light-color);
-            }
-            > li > a:hover {
                 color: var(--footer-a-color);
+                font-size: var(--footer-a-font-size);
+            }
+            
+            > li:nth-last-child(2) {
+                flex: 1;
             }
        }
     }
