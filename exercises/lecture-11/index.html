@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 11 - Модуль Grid</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+
+        main div:nth-of-type(1) {
+            background-color: #c9316b;
+        }
+
+        main div:nth-of-type(2) {
+            background-color: #c9319e;
+            /*grid-column: 2;*/
+        }
+
+        main div:nth-of-type(3) {
+            background-color: #c231c9;
+        }
+
+        main div:nth-of-type(1) {
+            background-color: #c9316b;
+        }
+
+        main div:nth-of-type(4) {
+            background-color: #8f31c9;
+        }
+
+        main div:nth-of-type(5) {
+            background-color: #5c31c9;
+        }
+
+        main div:nth-of-type(6) {
+            background-color: #3138c9;
+        }
+
+        main div:nth-of-type(7) {
+            background-color: #316bc9;
+        }
+
+        main div:nth-of-type(8) {
+            background-color: #319ec9;
+        }
+
+        main div:nth-of-type(9) {
+            background-color: #31c9c2;
+        }
+
+        main div:nth-of-type(10) {
+            background-color: #31c98f;
+        }
+
+        main div:nth-of-type(11) {
+            background-color: #31c95c;
+        }
+
+        main div:nth-of-type(12) {
+            background-color: #38c931;
+        }
+
+        main {
+            margin: 2vw 0;
+        }
+
+        main div {
+            color: #fff;
+            padding: 5vh;
+        }
+
+        /*Завдання 1*/
+        .container1 {
+            display: grid;
+            grid-template-columns: 15% 60% 25%;
+            margin: 2vw 0;
+        }
+
+        .container2 {
+            display: grid;
+            grid-template-rows: 95px 1fr 70px;
+            margin: 2vw 0;
+        }
+
+        .container3 {
+            display: grid;
+            grid-template-rows: 90px 300px 1fr;
+            grid-template-columns: repeat(4, 1fr);
+            margin: 2vw 0;
+        }
+
+        .container4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: center;
+            margin: 2vw 0;
+        }
+
+        .container5 {
+            display: grid;
+            grid-template-columns: repeat(4, 50px);
+            justify-content: end;
+            margin: 2vw 0;
+        }
+
+        .container6 {
+            display: grid;
+            grid-template-columns: repeat(4, 50px);
+            justify-content: space-between;
+            margin: 2vw 0;
+        }
+
+        .container7 {
+            display: grid;
+            grid-template-columns: repeat(4, 50px);
+            justify-content: space-around;
+            margin: 2vw 0;
+        }
+
+        .container8 {
+            display: grid;
+            grid-template-columns: repeat(4, 50px);
+            justify-content: space-evenly;
+            margin: 2vw 0;
+        }
+
+        .container9 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: stretch;
+            margin: 2vw 0;
+        }
+
+        .container10 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: start;
+            margin: 2vw 0;
+        }
+
+        .container11 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            margin: 2vw 0;
+        }
+
+        .container12 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 20px;
+            margin: 2vw 0;
+        }
+
+        .container13 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: space-between;
+            row-gap: 20px;
+            padding: 0 10vw;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="return">
+        
+        <a href="../index.html">Повернутись назад</a>
+        <hr/>
+
+    </div>
+
+    <header>
+        <h1>CSS Grid Layout</h1>
+
+        <ul>
+            <li><a href="./layout/index.html">Layout</a></li>
+            <li><a href="./template/index.html">Template</a></li>
+        </ul>
+
+    </header>
+
+    <!--Завдання 1-->
+    <main>
+
+        <div class="container1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+
+        <div class="container2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+
+        <div class="container3">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+
+        <div class="container4">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+
+        <div class="container5">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+
+        <div class="container6">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+
+        <div class="container7">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+
+        <div class="container8">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+
+        <div class="container9">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+
+        <div class="container10">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+
+        <div class="container11">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+
+        <div class="container12">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+
+        <div class="container13">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+
+    </main>
+    
+</body>
+</html>

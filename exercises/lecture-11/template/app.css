@@ -1,0 +1,23 @@
+.grid {
+  --min: 30ch;
+
+  display: grid;
+  
+  gap: 1rem;
+
+}
+
+body {
+  --padding: 5vw;
+  --max-width: 180ch;
+}
+
+/*Завдання 3*/
+.card {
+  /*min-width: 100%;
+  min-width: var(--min);
+  max-width: min-content;
+  max-width: 1fr;
+  grid-template-columns: auto-fit;*/
+  grid-template-rows: repeat (auto-fit, minmax(var(--min), 1fr));
+}
