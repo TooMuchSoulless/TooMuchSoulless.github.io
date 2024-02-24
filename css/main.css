@@ -33,7 +33,7 @@ body {
     font-size: var(--primary-font-size);
 }
 
-h1, h2, h3 {
+/*h1, h2, h3 {
     font-weight: 700;
 }
 
@@ -43,7 +43,7 @@ h1 {
 
 h2 {
     font-size: 1.3rem;
-}
+}*/
 
 .footer-social-list-unstyled {
     list-style: none;

@@ -27,6 +27,7 @@
   --anchor-color: rgb(165, 13, 99);
   --anchor-active-color: rgb(76, 11, 56);
   --currency-symbol: "\20B4";
+  --sale-color: rgb(220, 21, 21);
   --primary-text-color: #000;
   --primary-bg-color: #fff;
   --primary-font-family: 'Roboto', sans-serif;
@@ -54,21 +55,26 @@ body {
   color: var(--primary-text-color);
   background: var(--primary-bg-color);
 
-  /* 1rem = 16px 
-  font-size: .875rem / 1.3;*/
+  font-size: clamp(.85rem, 1.2rem, 1rem);
 }
 
-/*h1, h2, h3 {
+h1, h2, h3 {
   font-weight: 600;
 }
 
 h1 {
-  font-size: calc(1.3rem + 1.1vw);
+  /*font-size: calc(1.3rem + 1.1vw);*/
+  font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 h2 {
-  font-size: calc(1.2rem + 0.8vw);
-}*/
+  /*font-size: calc(1.2rem + 0.8vw);*/
+  font-size: clamp(1.3rem, 2vw, 1.5rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 1.5vw, 1.3rem);
+}
 
 a {
   color: var(--anchor-color);

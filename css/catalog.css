@@ -79,6 +79,10 @@
             }
             > .price:nth-of-type(2) {
                 float: right;
+                color: var(--sale-color);
+            }
+            > .price:nth-of-type(2)::before {
+                color: var(--sale-color);
             }
         }
     }
@@ -91,10 +95,12 @@
     }
 }
 
-#catalog {
-    display: grid;
-    gap: 1em;
-    grid-template-columns: 15rem auto;
+@media (min-width: 700px) {
+    #catalog {
+        display: grid;
+        gap: 1em;
+        grid-template-columns: 15rem auto;
+    }
 }
 
 /*ul.categories a:hover {
