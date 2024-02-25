@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic font-size</title>
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+    <style>
+
+        * {
+            margin: 0;
+        }
+
+        body {
+            color: #000;
+            background: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 1em;
+        }
+
+        /*Завдання 1*/
+        p {
+            font-size: clamp(16px, calc(20px + 1vw), 36px);
+        }
+
+        @media (max-width:768px) {
+            p {
+                font-size: 16px;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1920px) {
+            p {
+                font-size: clamp(16px, calc(20px + 1vw), 36px);
+            }
+        }
+
+        @media (min-width:1921px) {
+            p {
+                font-size: 48px;
+            }
+        }
+
+    </style>
+
+</head>
+<body translate="no">
+
+    <div class="return">
+        
+        <a href="../index.html">Повернутись назад</a>
+        <hr/>
+
+        <ul>
+            <li><a href="./grid-areas/index.html">Grid areas</a></li>
+            <li><a href="./navbar/">Navbar</a></li>
+        </ul>
+
+    </div>
+
+    <!--Завдання 1-->
+    <p>
+        This text has a font size of 20px at viewport width of 768px and font size of 36px when viewport width is 1920px. But if the viewport width is less than 768px, the font-size won't get lower than 16px and if the viewport width is more than 1920px font size will stop scaling at 48px.
+    </p>
+    
+</body>
+</html>

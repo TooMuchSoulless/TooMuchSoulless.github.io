@@ -1,0 +1,47 @@
+.grid-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+        'header header header'
+        'sidebar main main'
+        'footer footer footer';
+}
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+/*Завдання 2*/
+@media (max-width: 786px) {
+    .grid-container {
+        grid-template-areas: 
+        'header'
+        'sidebar'
+        'main'
+        'footer';
+    }
+    .sidebar {
+        grid-area: sidebar;
+    }
+    .header {
+        grid-area: header;
+    }
+    .main {
+        grid-area: main;
+    }
+    .footer {
+        grid-area: footer;
+    }
+}
