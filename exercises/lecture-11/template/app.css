@@ -1,10 +1,8 @@
 .grid {
   --min: 30ch;
-
   display: grid;
-  
   gap: 1rem;
-
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
 }
 
 body {
@@ -14,10 +12,10 @@ body {
 
 /*Завдання 3*/
 .card {
-  /*min-width: 100%;
   min-width: var(--min);
+  /*min-width: 100%;
   max-width: min-content;
   max-width: 1fr;
-  grid-template-columns: auto-fit;*/
-  grid-template-rows: repeat (auto-fit, minmax(var(--min), 1fr));
+  grid-template-columns: auto-fit;
+  grid-template-rows: repeat (auto-fit, minmax(var(--min), 1fr));*/
 }
