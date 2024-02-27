@@ -1,0 +1,49 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+table { 
+    width: 50rem; 
+    border-collapse: collapse; 
+    margin:3rem auto;
+}
+
+/*Завдання 2*/
+td, th { 
+    padding: 0.625rem;
+    border: 1px solid lightgray;
+    text-align: left;
+    font-size: 1.125rem;
+}
+
+/*Завдання 3*/
+th { 
+    background-color: indigo;
+    color: white;
+    font-weight: bold;
+} 
+
+/*Завдання 4*/
+tbody tr:nth-child(odd) {
+    background-color: lightgray;
+}
+
+/*Завдання 5*/
+@media (max-width: 50rem) {
+    table, thead, tbody, th, td, tr { 
+        display: block;
+    }
+       
+    thead tr { 
+        display: none;
+    }
+      
+    tr {
+        border: 1px solid darkgray;
+    }
+      
+    td { 
+        border: none;
+        border-bottom: 1px solid lightgray;
+    } 
+}
