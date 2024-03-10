@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 16 - JavaScript</title>
+</head>
+<body>
+
+    <div class="return">
+        <a href="../index.html">Повернутись назад</a>
+        <hr/>
+    </div>
+
+    <h1>Hello, javascript!</h1>
+
+    <!--Завдання 1-->
+    <script>
+        let message1 = "Hello";
+        let message2 = "Javascript";
+        alert(message1 + " " + message2 + "!")
+    </script>
+
+    <!--Завдання 2-->
+    <script>
+        'use strict';
+
+        let message = 'hello'; //потрібно оголосити змінну + лапки для рядкових значень
+        message = 123456;
+
+    </script>
+
+    <!--Завдання 3-->
+    <script>
+        var x = prompt("Введіть значення для x:");
+        var y = prompt("Введіть значення для y:");
+
+        x = parseFloat(x);
+        y = parseFloat(y);
+
+        var sum = x + y;
+
+        alert("Сума дорівнює: " + sum);
+    </script>
+
+    <!--Завдання 4-->
+    <script>
+        'use strict';
+
+        let a = 9007199254740991n; //перетворення a в тип BigInt
+        let b = 9007199254740991n;
+        console.log(a + b);
+    </script>
+
+    <!--Завдання 5-->
+    <script>
+        'use strict';
+
+        let apples = "2";
+        let oranges = "3";
+
+        alert( parseInt(apples) + parseInt(oranges) ); //необхідно перетворити рядкові значення у числа
+    </script>
+
+    <!--Завдання 6-->
+    <!--<script>
+        'use strict';
+
+        let a = 1, b = 1;
+        let c = ++a; //2
+        let d = b++; //1
+    </script>-->
+
+    <!--Завдання 7-->
+    <!--<script>
+        'use strict';
+
+        let a = 2;
+        let x = 1 + (a *= 2);
+        //після виконання коду: a = 4, x = 5
+    </script>-->
+
+    <!--Завдання 8-->
+    <script>
+        'use strict';
+
+        "" + 1 + 0 //10
+        "" - 1 + 0 //-1
+        true + false //1
+        6 / "3" //2
+        "2" * "3" //6
+        4 + 5 + "px" //9px
+        "$" + 4 + 5 //$45
+        "4" - 2 //2
+        "4px" - 2 //NaN
+        "  -9  " + 5 //-9 5
+        "  -9  " - 5 //-14
+        null + 1 //1
+        undefined + 1 //NaN
+        NaN + 1 //NaN
+
+    </script>
+
+    <!--Завдання 9-->
+    <script>
+        'use strict';
+
+        let n = 2;
+        n = n + 5; //n = += 5;
+        n = n * 2; //n = *= 2;
+
+    </script>
+
+    <!--Завдання 10-->
+    <script>
+        let n1 = "   123   ";
+        let n2 = "123z";
+        let n3 = true;
+        let n4 = false;
+
+        n1 = parseInt(n1);
+        n2 = parseInt(n2);
+        n3 = Number(n3);
+        n4 = Number(n4);
+
+        console.log(n1, n2, n3, n4);
+    </script>
+
+</body>
+</html>
