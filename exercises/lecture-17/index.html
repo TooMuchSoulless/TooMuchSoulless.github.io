@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 17 - Розгалуження. Логічний тип</title>
+</head>
+<body>
+
+    <!--Завдання 2-->
+    <script>
+
+        let x = 3
+        let y = 4
+
+        x == 3 //true
+        x === "3" //false
+        x!=5 //true
+        x!== "5" //true
+        //X!== 3 //помилка, бо змінна x оголошена з малої літери
+        y > 5 //false
+        y >= 3 //true
+        y < 5 //true
+        y <= 2 //false
+        1 == true //true
+        null == undefined //true
+        NaN == NaN //false
+
+    </script>
+
+    <!--Завдання 2-->
+    <!--<script>
+
+        let x = 3;
+        let y = 4;
+        let z = 5;
+
+        x ||= y; //3
+        x || (y = z); //3
+        x &&= y; //4
+        x && (y = z); //5
+        x ??= y; //3
+        x ?? (y = z); //3
+
+    </script>-->
+
+    <!--Завдання 3-->
+    <script>
+        const targetNumber = 3;
+        const guess = prompt("Спробуйте вгадати число від 1 до 5:");
+
+        if (parseInt(guess) === targetNumber) {
+            alert("Congratulations, You did it!");
+        } else if (parseInt(guess) > targetNumber) {
+            alert("The number is too long");
+        } else {
+            alert("The number is short");
+        }
+    </script>
+
+    <!--Завдання 4-->
+    <script>
+        let day = prompt("Введіть назву дня тижня:");
+
+        if (day === "Понеділок" || day === "Monday"){
+            alert("Початок робочого тижня!");
+        } else if (day === "П'ятниця" || day === "Friday"){
+            alert("Кінець робочого тижня!");
+        } else {
+            alert("Звичайний день");
+        }
+    </script>
+
+    <script>
+        let today = prompt("Введіть назву дня тижня:");
+
+        switch (today) {
+            case "Понеділок": 
+            case "Monday":
+                alert("Початок робочого тижня!");
+                break;
+            case "П'ятниця": 
+            case "Friday":
+                alert("Кінець робочого тижня!");
+                break;
+            default:
+                alert("Звичайний день");
+        }
+    </script>
+
+    <!--Завдання 5-->
+    <script>
+        let score = prompt("Введіть кількість балів:");
+        score = parseFloat(score);
+
+        let grade;
+
+        if (score < 50) {
+            grade = 'F';
+            alert("Ваш ступінь: " + grade);
+        } else if (score < 70) {
+            grade = 'D';
+            alert("Ваш ступінь: " + grade);
+        } else if (score < 80) {
+            grade = 'C';
+            alert("Ваш ступінь: " + grade);
+        } else if (score < 90) {
+            grade = 'B';
+            alert("Ваш ступінь: " + grade);
+        } else {
+            grade = 'A';
+            alert("Ваш ступінь: " + grade);
+        }
+
+    </script>
+
+    <script>
+        let myscore = prompt("Введіть кількість балів:");
+        myscore = parseFloat(myscore);
+
+        let mygrade =
+        score < 50 ? 'F' :
+        score < 70 ? 'D' :
+        score < 80 ? 'C' :
+        score < 90 ? 'B' :
+        'A';
+
+        alert("Ваш ступінь: " + mygrade);
+    </script>
+
+    <!--Завдання 6-->
+    <script>
+        let firstName = null;
+        let lastName = undefined;
+        let username = (firstName || lastName) ?? "Guest";
+        // або let username = firstName ?? lastName ?? "Guest";
+        // або let username = firstName || lastName || "Guest";
+
+        console.log(username); //"Guest"
+    </script>
+    
+</body>
+</html>
