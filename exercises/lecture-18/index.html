@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 18 - Functions</title>
+</head>
+<body>
+
+    <!--Завдання 1-->
+    <script>
+        var age = prompt("How old are you?");
+        function checkAge(age) {
+            if (age > 18) {
+                return true;
+            } else {
+                return confirm('Did parents allow you?');
+            }
+        }
+        checkAge(age);
+        
+        var age = prompt("How old are you?");
+        function checkAge(age) {
+            if (age > 18) {
+                return true;
+            }
+            return confirm('Did parents allow you?');
+        }
+        checkAge(age);
+
+        //Ні, ця функція працюватиме так само, як і попередня, просто коротший синтаксис без блоку else.
+        //Є різниця у способі, яким виконується умова, бо з блоком else, навіть якщо умова age > 18 виконується, програма зробить додатковий крок, перш ніж завершити виконання функції, а без else, якщо умова age > 18 виконується, програма завершить виконання функції без додаткових кроків.
+    </script>
+
+    <!--Завдання 2-->
+    <script>
+        function checkAge(age) {
+            return (age > 18) ? true : confirm('Did parents allow you?');
+    }
+    </script>
+
+    <script>
+        function checkAge(age) {
+            return (age > 18) || confirm('Did parents allow you?');
+    }
+    </script>
+
+    <!--Завдання 3-->
+    <script>
+        function checkAge(age) {
+            return (age > 18) || confirm('Did parents allow you?');
+    }
+    //Ні, дужки не є обов'язковими, але вони будуть корисними для розуміння коду, якщо є складніші умови.
+    </script>
+
+    <!--Завдання 4-->
+    <script>
+        function min(a, b) {
+            if (a < b) {
+                return a;
+            } else if (a > b) {
+                return b;
+            }
+            return a;
+        }
+
+        console.log(min(2, 5)); //2
+        console.log(min(3, -1)); //-1
+        console.log(min(1, 1)); //1
+    </script>
+
+    <script>
+        function min(a, b) {
+            return a < b ? a : b;
+        }
+
+        console.log(min(2, 5)); //2
+        console.log(min(3, -1)); //-1
+        console.log(min(1, 1)); //1
+    </script>
+
+    <!--Завдання 5-->
+    <script>
+        function pow(x, n) {
+            if (n === 1) {
+                return x;
+            } 
+            return x * pow(x, n - 1);
+        }
+
+        console.log(pow(3, 2)); //9
+        console.log(pow(3, 3)); //27
+        console.log(pow(1, 100)); //1
+
+        let x = parseFloat(prompt("Введіть значення x:"));
+        let n = parseFloat(prompt("Введіть значення n:"));
+
+        if (Number.isInteger(n) && n >= 1) {
+            console.log(pow(x, n));
+        } else {
+            alert("Неправильне значення параметра n.");
+        }
+    </script>
+
+    <!--Завдання 6-->
+    <script>
+        const ask = (question, yes, no) => {
+            if (confirm(question)) yes();
+            else no();
+        };
+    </script>
+
+    <!--Завдання 7-->
+    <script>
+        const askme = function(question, yes, no) {
+            if (confirm(question)) {
+                yes();
+            } else {
+                no();
+            }
+        };
+    </script>
+
+    <!--Завдання 8-->
+    <script>
+        function A() {console.log('A was called'); return undefined;}
+        function B() {console.log('B was called'); return false;}
+        function C() {console.log('C was called'); return "foo";}
+        
+        console.log((A(), C()));
+        console.log((B(), C()));
+    </script>
+</body>
+</html>
