@@ -135,6 +135,7 @@ let username = /^[a-z0-9_-]{8,16}$/i;
 
 //Завдання 16
 let email = /^[^\s!#$%&'*+/=?^`{|}~-]+@[^\s@\d]+\.[^\s@!#$%&'*+/=?^`{|}~\d]+$/;
+//[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?
 
 //Завдання 17
 let sentence3 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in sapien eu velit eleifend ullamcorper eget vitae nulla. Aenean euismod purus sed neque dictum, nec lobortis ante faucibus.';

@@ -127,8 +127,11 @@
         function B() {console.log('B was called'); return false;}
         function C() {console.log('C was called'); return "foo";}
         
-        console.log((A(), C()));
-        console.log((B(), C()));
+        console.log(A() ?? C());
+        console.log(B() || C());
+        
+        //console.log((A(), C()));
+        //console.log((B(), C()));
     </script>
 </body>
 </html>
