@@ -5,6 +5,11 @@
     color: #fff;
 }
 
+.bg-new {
+    background-color: green;
+    color: #fff;
+}
+
 .product-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
