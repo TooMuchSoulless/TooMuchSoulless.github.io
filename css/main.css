@@ -64,7 +64,7 @@ h2 {
     }
     
     .bg-dark {
-        background-color: black;
+        background-color: var(--anchor-active-color);
     }
     
     .text-white {
@@ -76,7 +76,7 @@ h2 {
     }
     
     ul.categories li a {
-        color: indigo;
+        color: var(--anchor-color);
         text-decoration: none;
         font-size: 1.2rem;
     }
