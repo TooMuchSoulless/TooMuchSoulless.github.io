@@ -14,6 +14,8 @@
 
         <!--brand-->
         <a href="index.html" class="brand">Shopaholic</a>
+        <label for="toggler">&nbsp;<i class="fas fa-bars"></i>&nbsp;</label>
+        <input type="checkbox" id="toggler">
 
         <!--navigation-->
         <nav class="navbar">
@@ -29,7 +31,7 @@
         <nav class="toolbar">
 
             <a href="#" class="far fa-heart"></a>
-            <a href="#" class="fas fa-dolly-flatbed"></a>
+            <a href="#" class="fas fa-dolly-flatbed">(<span id="cart-amount">0</span>)</a>
             <a href="#" class="far fa-user"></a>
 
         </nav>
@@ -48,7 +50,7 @@
 
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                    <li class="breadcrumb-item active">Blog</li>
+                    <li class="breadcrumb-item active">Your cart</li>
                 </ul>
 
             </div>
@@ -57,13 +59,7 @@
         
     </section>
 
-    <main>
-
-        <h1>Shopping cart</h1>
-
-    </main>
-
-    <section id="cart" class="mb-3">
+    <section id="cart-page" class="mb-3">
 
         <div class="cart-container py-3 px-4">
 
@@ -71,133 +67,68 @@
 
                 <div class="table">
 
-                    <div class="row header">
-                        <div class="cell">Product</div>
-                        <div class="cell">Price</div>
-                        <div class="cell">Quantity</div>
-                        <div class="cell">Total</div>
-                        <div class="cell">Action</div>
-                    </div>
+                </div>
 
-                    <div class="row ">
-                        <div class="cell">Product</div>
-                        <div class="cell">123</div>
-                        <div class="cell">3</div>
-                        <div class="cell">1234</div>
-                        <div class="cell"><a href="#" class="fas fa-trash-alt"></a></div>
-                    </div>
+            </div>
 
-                    <div class="row ">
-                        <div class="cell">Product</div>
-                        <div class="cell">123</div>
-                        <div class="cell">3</div>
-                        <div class="cell">1234</div>
-                        <div class="cell"><a href="#" class="fas fa-trash-alt"></a></div>
-                    </div>
+            <div class="cart-sidebar">
 
-                    <div class="row ">
-                        <div class="cell">Product</div>
-                        <div class="cell">123</div>
-                        <div class="cell">3</div>
-                        <div class="cell">1234</div>
-                        <div class="cell"><a href="#" class="fas fa-trash-alt"></a></div>
-                    </div>
+                <div class="card bg-light">
 
-                    <div class="row ">
-                        <div class="cell">Product</div>
-                        <div class="cell">123</div>
-                        <div class="cell">3</div>
-                        <div class="cell">1234</div>
-                        <div class="cell"><a href="#" class="fas fa-trash-alt"></a></div>
-                    </div>
+                    <div class="card-body">
 
-                    <div class="row ">
-                        <div class="cell">Product</div>
-                        <div class="cell">123</div>
-                        <div class="cell">3</div>
-                        <div class="cell">1234</div>
-                        <div class="cell"><a href="#" class="fas fa-trash-alt"></a></div>
+                        <h4 class="text-uppercase mb-4">Cart total</h4>
+                        <ul class="list-unstyled">
+
+                            <li class="d-flex align-items-center justify-content-between">
+                                <strong class="text-uppercase">Subtotal: </strong>&nbsp;
+                                <span class="text-muted small"><span class="cart-subtotal price">250</span></span>
+                            </li>
+
+                            <li class="d-flex align-items-center justify-content-between">
+                                <strong class="text-uppercase">Tax: </strong>&nbsp;
+                                <span class="text-muted small"><span class="cart-tax price">2</span></span>
+                            </li>
+
+                            <li class="d-flex align-items-center justify-content-between">
+                                <strong class="text-uppercase">Shipping: </strong>&nbsp;
+                                <span class="text-muted small"><span class="cart-shipping price">2</span></span>
+                            </li>
+
+                            <li class="border-bottom my-2"></li>
+
+                            <li class="d-flex align-items-center justify-content-between mb-4">
+                                <strong class="text-uppercase">Total: </strong>&nbsp;
+                                <span class="text-muted small"><span class="cart-total price">250</span></span>
+                            </li>
+
+                            <li>
+
+                                <form action="#">
+                                    
+                                    <div class="input-group">
+                                        <input class="form-control mb-1" type="text" placeholder="Enter your coupon">
+                                        <button class="btn btn-primary" type="submit"> <i class="fas fa-gift"></i>&nbsp;Apply coupon</button>
+                                    </div>
+
+                                </form>
+
+                            </li>
+                            
+                        </ul>
+
                     </div>
 
                 </div>
 
             </div>
 
-            <div class="cart-sidebar">Sidebar</div>
-
         </div>
 
     </section>
 
-    
-    <footer class="page-footer mb-3">
- 
-        <section class="footer-main">
-
-            <div class="footer-main-item">
-
-                <h2 class="footer-title">About</h2>
-                <ul>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Customers</a></li>
-                    <li><a href="#">Careers</a></li>
-                </ul>
-
-            </div>
-
-            <div class="footer-main-item">
-
-                <h2 class="footer-title">Resources</h2>
-                <ul>
-                    <li><a href="#">Docs</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">eBooks</a></li>
-                    <li><a href="#">Webinars</a></li>
-                </ul>
-
-            </div>
-
-            <div class="footer-main-item">
-
-                <h2 class="footer-title">Contact</h2>
-                <ul>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Sales</a></li>
-                    <li><a href="#">Advertise</a></li>
-                </ul>
-
-            </div>
-
-        </section>
-
-        <!-- Вправа 10 з домашнього завдання 5 -->
-        <section class="footer-social py-3">
-
-            <ul class="footer-social-list-unstyled">
-                <li><a href="https://www.facebook.com/facebookIndia"><i class="fab fa-facebook social-media"></i></a></li>
-                <li><a href="https://twitter.com/X"><i class="fab fa-twitter social-media"></i></a></li>
-                <li><a href="https://www.instagram.com/instagram/?hl=uk"><i class="fab fa-instagram social-media"></i></a></li>
-                <li><a href="https://github.com/TooMuchSoulless/TooMuchSoulless.github.io"><i class="fab fa-github social-media"></i></a></li>
-                <li><a href="https://www.linkedin.com/company/linkedin/"><i class="fab fa-linkedin social-media"></i></a></li>
-                <li><a href="https://www.youtube.com/@LofiGirl"><i class="fab fa-youtube social-media"></i></a></li>
-            </ul>
-
-        </section>
-
-        <!-- footer legal -->
-        <section class="footer-legal">
-
-            <ul class="footer-legal-list">
-                <li><a href="#">Terms &amp; Conditions</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#"> &copy; 2024 Copyright Shopaholic Inc.</a></li>
-            </ul>
-
-        </section>
-
-    </footer>
+    <script src="./js/db.js"></script>
+    <script src="./js/app.js"></script>
 
 </body>
 </html>

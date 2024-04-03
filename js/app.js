@@ -112,7 +112,6 @@ function CardProduct(item) {
         let product = productList.getProductById(id);
         product = {...product, amount: 1};
         shoppingCart.addItemToCart(product);
-        document.getElementById('cart-amount').textContent = shoppingCart.totalAmount();
     } 
 }
 
@@ -121,16 +120,65 @@ function Cart(tax = 0.07, shipping = 0) {
     this.tax = tax;
     this.shipping = shipping;
 
-    let cart = [];
+    const store = new Store();
+
+    let cart = store.init('basket');
 
     this.saveCart = function() {
-        console.log(cart);
+        store.set('basket', cart);
+        cartAmount.textContent = shoppingCart.totalAmount();
     }
 
     function Item (id, price, amount) {
         this.id = id;
         this.price = price;
         this.amount = amount;
+    }
+
+    const cartItemTemplate = (item, product) => `
+    <div class="row cart-item" id="id${product.id}">
+        <div class="cell"><img src="${product.image}" alt="${product.name}" height="30"></div>
+        <div class="cell">${product.name}</div>
+        <div class="cell"><span class="product-price price">${product.price}</span></div>
+        <div class="cell">${item.amount}</div>
+        <div class="cell"><span class="product-subtotal price">0</span></div>
+        <div class="cell"><a href="#!" class="fas fa-trash-alt"></a></div>
+    </div>
+    `;
+
+    const findItem = (items, id) => items.find(item => item.id == id);
+
+    this.populateShoppingCart = (products) => {
+        let result = `
+        <div class="row header">
+            <div class="cell">Cover</div>
+            <div class="cell">Product</div>
+            <div class="cell">Price</div>
+            <div class="cell">Quantity</div>
+            <div class="cell">Total</div>
+            <div class="cell">Action</div>
+        </div>
+        `;
+
+        cart.forEach(item => result += cartItemTemplate(item, findItem(products, item.id)));
+        return result;
+    }
+
+    this.setCartTotal = function(shoppingCartItems) {
+        let tmpTotal = 0;
+        let subTotal = 0;
+
+        cart.map(item => {
+            let price = shoppingCartItems.querySelector(`#id${item.id} .product-price`).textContent;
+            tmpTotal = +price * item.amount;
+            shoppingCartItems.querySelector(`#id${item.id} .product-subtotal`).textContent = parseFloat(tmpTotal).toFixed(2);
+            subTotal += parseFloat(tmpTotal).toFixed(2);
+        });
+
+        document.querySelector('.cart-subtotal').textContent = this.totalInCart();
+        document.querySelector('.cart-tax').textContent = this.tax;
+        document.querySelector('.cart-shipping').textContent = this.shipping;
+        document.querySelector('.cart-total').textContent = (+this.totalInCart() + +this.tax + +this.shipping).toFixed(2);
     }
     
     this.addItemToCart = function(product) {
@@ -227,7 +275,7 @@ function ProductList(products) {
     `;
 
     this.populateProductList = function(products) {
-        let content = '';
+        let content = "";
         products.forEach(item => content += this.productTemplate(item))
         return content;
     }
@@ -235,7 +283,7 @@ function ProductList(products) {
     this.getProductById = (id) => this.products.find(item => item.id == id);
 }
 
-const liElement = (item) => `<li><a class="category-item href="#!" data-id="${item.id}">${item.name}</a></li>`;
+const liElement = (item) => `<li><a class="category-item" href="#!" data-id="${item.id}">${item.name}</a></li>`;
 
 const ulElement = items => {
     let ul = document.createElement('ul');
@@ -297,7 +345,7 @@ function renderCategory(productContainer, selector, products) {
         }
 
         let productCards = productContainer.querySelectorAll('.product');
-        productCards.forEach(item => CardProduct(item));
+        productCards.forEach(item => new CardProduct(item));
 
     }))
 }
@@ -327,30 +375,69 @@ function renderSelect(selectPicker, products, productContainer) {
     });
 }
 
+function Store() {
+
+    this.init = function(key) {
+        if(!this.isset(key)) {
+            this.set(key, []);
+        }
+        return this.get(key);
+    }
+
+    this.isset = function(key) {
+        return this.get(key) !== null;
+    }
+
+    this.get = function(key) {
+        let value = localStorage.getItem(key);
+        console.log('Value for key', key, 'is', value);
+        return value === null ? null : JSON.parse(value);
+    }
+
+    this.set = function(key, value) {
+        return localStorage.setItem(key, JSON.stringify(value));
+    }
+    
+}
+
 let shoppingCart = new Cart();
 let productList = new ProductList(products);
 
+const cartAmount = document.getElementById('cart-amount');
+cartAmount.textContent = shoppingCart.totalAmount();
+
 function main() {
+
     const productContainer = document.querySelector('.product-container');
 
-    productContainer.innerHTML = productList.populateProductList(products);
+    if (productContainer) {
 
-    let productCards = productContainer.querySelectorAll('.product');
+        productContainer.innerHTML = productList.populateProductList(products);
 
-    productCards.forEach(item => new CardProduct(item));
+        let productCards = productContainer.querySelectorAll('.product');
 
-    const sidebar = document.getElementById('sidebar');
+        productCards.forEach(item => new CardProduct(item));
 
-    if (sidebar) {
-        const categoryContainer = document.getElementById('category-container');
-        populateCategories(categoryContainer, categories);
+        const sidebar = document.getElementById('sidebar');
 
-        renderCategory(productContainer, '#category-container', products)
+        if (sidebar) {
+            const categoryContainer = document.getElementById('category-container');
+            populateCategories(categoryContainer, categories);
+
+            renderCategory(productContainer, '#category-container', products)
+        }
+
+        const selectPicker = document.getElementById('selectpicker');
+        if (selectPicker) {
+            renderSelect(selectPicker, products, productContainer);
+        }
     }
 
-    const selectPicker = document.getElementById('selectpicker');
-    if (selectPicker) {
-        renderSelect(selectPicker, products, productContainer);
+    const cartPage = document.getElementById('cart-page');
+    if(cartPage) {
+        const shoppingCartItems = cartPage.querySelector('.cart-main .table');
+        shoppingCartItems.innerHTML = shoppingCart.populateShoppingCart(products);
+        shoppingCart.setCartTotal(shoppingCartItems);
     }
 
 }
