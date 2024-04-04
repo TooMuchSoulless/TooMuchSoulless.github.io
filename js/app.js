@@ -400,6 +400,45 @@ function Store() {
     
 }
 
+const badgeTemplate = (item) => `
+<div class="form-check mb-1">
+    <input class="form-check-input" type="checkbox" id="id-${item}" value="${item}" name="badge">
+    &nbsp;<label class="form-check-label" for="id-${item}">${item}</label>
+</div>
+`;
+
+const renderList = (products, value) => productList.populateProductList(products.filter(product => product.badge.title.includes(value)));
+
+const renderShowOnly = (showOnly, products, productContainer) => {
+    let badges = [...new Set([...products.map(item => item.badge.title)].filter(item => item != ''))];
+
+    showOnly.innerHTML = badges.map(item => badgeTemplate(item)).join("");
+    let checkboxes = showOnly.querySelectorAll('input[name="badge"]');
+
+    let values = [];
+
+    checkboxes.forEach(item => {
+        item.addEventListener("change", event => {
+            if(event.target.checked) {
+                values.push(item.value);
+                productContainer.innerHTML = values.map(value => renderList(products, value)).join("");
+            } else {
+                if (values.length != 0) {
+                    values.pop(item.value);
+                    productContainer.innerHTML = values.map(value => renderList(products, value)).join("");
+                }
+            }
+
+            if (values.length == 0) {
+                productContainer.innerHTML = productList.populateProductList(products);
+            }
+
+            let productCards = productContainer.querySelectorAll('.product');
+            productCards.forEach(item => new CardProduct(item));
+        })
+    })
+}
+
 let shoppingCart = new Cart();
 let productList = new ProductList(products);
 
@@ -431,6 +470,11 @@ function main() {
         if (selectPicker) {
             renderSelect(selectPicker, products, productContainer);
         }
+
+        const showOnly = document.querySelector(".show-only");
+        if(showOnly) {
+            renderShowOnly(showOnly, products, productContainer);
+        }
     }
 
     const cartPage = document.getElementById('cart-page');
@@ -438,6 +482,53 @@ function main() {
         const shoppingCartItems = cartPage.querySelector('.cart-main .table');
         shoppingCartItems.innerHTML = shoppingCart.populateShoppingCart(products);
         shoppingCart.setCartTotal(shoppingCartItems);
+    }
+
+    const checkoutPage = document.getElementById('checkout-page');
+    if (checkoutPage) {
+        const checkoutForm = checkoutPage.getElementById('checkout-form');
+        const errorMessages = document.getElementById('errorMessages');
+
+        function displayError(message) {
+            errorMessages.innerHTML += `<div class="error">${message}</div>`;
+        }
+
+        function isValidEmail(email) {
+            return /^[^\s!#$%&'*+/=?^`{|}~-]+@[^\s@\d]+\.[^\s@!#$%&'*+/=?^`{|}~\d]+$/.test(email);
+            /*/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);*/
+        }
+
+        checkoutForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const {name, email, address1, address2, city, zipcode} = checkoutForm.elements;
+
+            errorMessages.innerHTML = "";
+            if (!name.value.trim()) {
+                displayError('Name field is required.')
+                return;
+            }
+
+            if (!address1.value.trim() || !address2.value.trim()) {
+                displayError('Address 1 or Address 2 field is required.')
+                return;
+            }
+
+            if (!city.value.trim()) {
+                displayError('City field is required.')
+                return;
+            }
+
+            if (!zipcode.value.trim()) {
+                displayError('City postcode field is required.')
+                return;
+            }
+            
+            if (!email.value.trim() || !isValidEmail(email.value)) {
+                displayError('Please enter a valid email address.')
+                return;
+            }
+        })
     }
 
 }
