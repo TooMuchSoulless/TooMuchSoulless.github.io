@@ -19,8 +19,8 @@ const p2 = document.querySelector('#p2');
 p2.style.cssText = 'background-color: gold; color: blue; font-size: 2rem;';
 
 //Завдання 4
-const p3 = document.querySelector('#p3');
-p3.classList.add(classes[2]);
+const p3 = document.getElementById('p3');
+p3.className = "third";
 
 //Завдання 5
 const p4 = document.querySelector('#p4');

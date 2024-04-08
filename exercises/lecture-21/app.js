@@ -70,13 +70,8 @@ allnames2.splice(1, 0, 'Catwoman');
 console.log(allnames2);
 
 //Завдання 12
-const names = ['Batman', 'Catwoman', 'Joker', 'Bane'];
-const fromIndex = 1;
-const removeCount = 2;
-const newNames = [
- ...names.slice(0, fromIndex),
- ...names.slice(fromIndex + removeCount)
-];
+const newNames = ['Batman', 'Catwoman', 'Joker', 'Bane'];
+names.splice(1, 2);
 
 console.log(newNames); 
 
