@@ -578,54 +578,58 @@ function main() {
     const cartPage = document.getElementById('cart-page');
     if(cartPage) {
         const shoppingCartItems = cartPage.querySelector('.cart-main .table');
-        shoppingCartItems.innerHTML = shoppingCart.populateShoppingCart(products);
 
-        shoppingCart.renderCart(shoppingCartItems);
-
-        let isAuth = auth => auth ?? false;
-
-        class AuthException extends Error {
-            constructor(code, message) {
-                const fullMessage = message ? `${code}: ${message}` : code;
-                super(fullMessage);
-                this.name = code;
-                this.code = code;
-                this.message = fullMessage;
-            }
-
-            toString() {
-                return this.message;
-            }
-        }
-
-        const msgBoxId = document.getElementById('dialogBox');
+        fetchData(`${url}/products`)
+        .then (products => {
+            shoppingCartItems.innerHTML = shoppingCart.populateShoppingCart(products);
+            
+            shoppingCart.renderCart(shoppingCartItems);
         
-        function showDialog(err) {
-            msgBoxId.querySelector('.message').textContent = err;
-            msgBoxId.showModal();
-        }
+            let isAuth = auth => auth ?? false;
 
-        const checkoutButton = document.querySelector('.checkout');
-
-        const closeButton = document.querySelector('.close');
-
-        checkoutButton.addEventListener('click', () => {
-            try {
-                if(!isAuth()) {
-                    throw new AuthException("FORBIDDEN" , "You don't have access to this page.")
-                } else {
-                    window.open("checkout.html");
+            class AuthException extends Error {
+                constructor(code, message) {
+                    const fullMessage = message ? `${code}: ${message}` : code;
+                    super(fullMessage);
+                    this.name = code;
+                    this.code = code;
+                    this.message = fullMessage;
                 }
 
-            } catch(err) {
-                console.error(err)
-                console.error(err.toString())
-                showDialog(err.toString())
-                closeButton.addEventListener('click', () => {
-                    msgBoxId.close();
-                })
+                toString() {
+                    return this.message;
+                }
             }
-        })
+
+            const msgBoxId = document.getElementById('dialogBox');
+            
+            function showDialog(err) {
+                msgBoxId.querySelector('.message').textContent = err;
+                msgBoxId.showModal();
+            }
+
+            const checkoutButton = document.querySelector('.checkout');
+
+            const closeButton = document.querySelector('.close');
+
+            checkoutButton.addEventListener('click', () => {
+                try {
+                    if(!isAuth()) {
+                        throw new AuthException("FORBIDDEN" , "You don't have access to this page.")
+                    } else {
+                        window.open("checkout.html");
+                    }
+
+                } catch(err) {
+                    console.error(err)
+                    console.error(err.toString())
+                    showDialog(err.toString())
+                    closeButton.addEventListener('click', () => {
+                        msgBoxId.close();
+                    })
+                }
+            })
+        });
     }
 
     const checkoutPage = document.getElementById('checkout-page');
