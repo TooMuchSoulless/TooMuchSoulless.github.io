@@ -1,9 +1,45 @@
 /* hero.css */
 
 .hero {
-    background-color: aliceblue;
     text-shadow: rgb(0, 0, 0 / 0.5) 2px 2px 2px;
     background-image: url(../images/bg-banner.jpg);
-    background-position: center center;
+    background-position: 200% center;
     background-size: cover;
+    height: 560px;
+    position: relative;
+}
+
+.offer {
+    max-width: 465px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 10rem;
+}
+
+.slogan {
+    font-size: 3.5em;
+    font-weight: 500;
+    margin: 0;
+}
+
+@media (max-width: 40rem) {
+    .offer {
+        margin-left: 1.5rem;
+
+        .emphasis {
+            font-size: 0.8rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .slogan {
+            font-size: 2rem; 
+        }
+
+    }
+
 }

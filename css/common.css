@@ -1,19 +1,5 @@
 /* common.css */
 
-/*Вправа 6 з домашнього завдання 3:
-помилка у фрагменті полягає у тому, що @import повинен розміщуватися перед будь-якими іншими стилями
-@import url("my-imported-styles.css");
-#services {
-  margin: 0px;
-  padding: 0px;
-} */
-
-/*Вправа 7 з домашнього завдання 3 */
-/*footer {
-  --footer-text-color:#fff;
-  --footer-bg-color: #000;
-}*/
-
 *,
 *::before,
 *::after {
@@ -21,34 +7,15 @@
   box-sizing: border-box;
 }
 
-/*Вправа 8 з домашнього завдання 5 */
-/*Вправа 12 з домашнього завдання 6*/
 :root {
-  --anchor-color: rgb(165, 13, 99);
-  --anchor-active-color: rgb(76, 11, 56);
+  --anchor-color: #851773;
+  --anchor-active-color: #277647;
   --currency-symbol: "\20B4";
-  --sale-color: rgb(220, 21, 21);
-  --primary-text-color: #000;
+  --primary-text-color: #2f2f2f;
+  --secondary-text-color: #f4f4f4;
   --primary-bg-color: #fff;
-  --primary-font-family: 'Roboto', sans-serif;
+  --primary-font-family: "Poppins", sans-serif;
   --primary-font-size: 0.875rem;
-}
-
-.exercises-block {
-  background-color: lightgray;
-  color:rgb(1, 16, 1);
-  position: relative;
-  top: 32px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  margin-top: 4rem;
-  border: 2px solid #b5b5b5;
-}
-
-.exercises-block-link{
-  color: rgb(255, 53, 161);
-  font-weight: bold;
 }
 
 body {
@@ -63,12 +30,10 @@ h1, h2, h3 {
 }
 
 h1 {
-  /*font-size: calc(1.3rem + 1.1vw);*/
   font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 h2 {
-  /*font-size: calc(1.2rem + 0.8vw);*/
   font-size: clamp(1.3rem, 2vw, 1.5rem);
 }
 
@@ -77,11 +42,6 @@ h3 {
 }
 
 a {
-  color: var(--anchor-color);
+  color: white;
   text-decoration: none;
 }
-
-/* Вправа 11 з домашнього завдання 5 */
-/*header > nav > a {
-  text-decoration: none;
-}*/

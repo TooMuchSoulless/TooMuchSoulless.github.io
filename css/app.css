@@ -31,27 +31,35 @@
 .divider {
     background-image: url(../images/divider-bg.jpg);
     background-size: cover;
-    background-position: center center;
+    background-position: top center;
     background-attachment: fixed;
+    height: 250px;
+}
+
+@media (max-width: 40rem) {
+    .divider {
+        .text-reverse{
+            font-size: 1em;
+        }
+        
+        .slogan {
+            font-size: 2em;
+        }
+    }
+
+    .services {
+        .text-start {
+            margin-bottom: 2.5rem;
+        }
+    }
 }
 
 .text-right {
     text-align: right;
 }
 
-.gradient {
-    font-size: 2vw;
-    font-weight: 700;
-    background: linear-gradient(to right,
-        rgb(25, 76, 192), 
-        rgb(196, 26, 3) 20%, 
-        rgb(236, 190, 6) 40%, 
-        rgb(25, 76, 192) 60%, 
-        rgb(3, 116, 8) 80%, 
-        rgb(196, 26, 3));
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+.text-reverse {
+    color: var(--secondary-text-color);
 }
 
 /* padding y*/
@@ -83,6 +91,15 @@
 .py-5 {
     padding-top: 3rem;
     padding-bottom: 3rem;
+}
+
+.p-5 {
+    padding-bottom: 5rem;
+}
+
+.py-7 {
+    padding-top: 7.5em;
+    padding-bottom: 7.5em;
 }
 
 /*padding x*/
@@ -158,22 +175,12 @@
     text-align: center;
 }
 
-.btn-black-gradient {
-    color: lavender;
-    background-image: linear-gradient(rgb(122, 122, 122), rgb(61, 61, 61), rgb(25, 25, 25), rgb(3, 3, 3));
-    background-size: 100% 300%;
-    background-position: 0% 30%;
-    padding: 0.5rem 2rem;
-    border: 1px rgb(82, 82, 82);
-    border-radius: 14px;
-}
-
-.btn-black-gradient:hover {
-    background-position: 0 0;
+.fs-2 {
+    font-size: 1.2rem;
 }
 
 .btn {
-    background-color: hsl(0, 0%, 90%);
+    background-color: var(--anchor-active-color);
     border: 1px solid hsl(0, 0%, 70%);
     outline: none;
     cursor: pointer;
@@ -182,18 +189,23 @@
 }
 
 .btn:hover, .btn:focus {
-    background-color: hsl(0, 0%, 80%);
-    box-shadow: 0 0 5px 0 hsl(0, 0%, 70%);
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px 0 hsl(0, 0%, 50%);
+    color: #277647;
+    font-weight: 500;
+    border: 1px solid hsl(0, 0%, 50%);
 }
 
 .btn-primary {
-    background-color: rgb(76, 11, 56);
-    border-color: rgb(165, 13, 99);
-    color: white;
+    background-color: var(--anchor-color);
+    color: var(--secondary-text-color);
 }
 
 .btn-primary:hover {
-    background-color: white;
-    border-color: rgb(165, 13, 99);
-    color: rgb(76, 11, 56);
+    background-color: var(--secondary-text-color);
+    color: var(--anchor-color);
+}
+
+.emphasis {
+    color: var(--anchor-active-color);
 }

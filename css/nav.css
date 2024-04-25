@@ -39,7 +39,7 @@
             display: block;
         }
         > a:hover {
-            color: var(--anchor-active-color);
+            color: var(--primary-text-color);
             text-decoration: underline;
         }
         
@@ -55,10 +55,7 @@
             color: var(--anchor-color);
         }
         > a:hover {
-            color: var(--anchor-active-color);
-        }
-        > a:active {
-            color: rgb(232, 89, 189);
+            color: var(--primary-text-color);
         }
                 
     }

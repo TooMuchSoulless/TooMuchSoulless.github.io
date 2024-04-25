@@ -15,55 +15,32 @@
 @import url(dialog.css);
 @import url(checkout.css);
 
-/* Вправа 7 з домашнього завдання 5 */
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css);
 
 @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css);
 
-/* Вправа 8 з домашнього завдання 3:
-body {
-    color: var(--primary-text-color);
-    background: var(--primary-bg-color);
-}
-
-footer {
-    color: var(--footer-text-color);
-    background: var(--footer-bg-color);
-}*/
-
-/* Вправа 9 з домашнього завдання 5 */
 body {
     font-family: var(--primary-font-family);
     font-size: var(--primary-font-size);
 }
 
-/*h1, h2, h3 {
-    font-weight: 700;
+.text-uppercase {
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
 }
 
-h1 {
-    font-size: 1.45rem;
+.text-uppercase::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 0.5px;
+    background-color: var(--anchor-color);
+    position: absolute;
 }
 
-h2 {
-    font-size: 1.3rem;
-}*/
-
-.footer-social-list-unstyled {
-    list-style: none;
-}
-
-.footer-social {
-    background-color: rgb(28, 27, 28);
- 
-}
-
-/* Вправа 13 з домашнього завдання 6 */
 .sidebar-wrapper {
-    .text-uppercase {
-        text-transform: uppercase;
-    }
-    
+
     .bg-dark {
         background-color: var(--anchor-active-color);
     }

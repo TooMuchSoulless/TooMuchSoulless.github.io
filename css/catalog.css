@@ -1,20 +1,33 @@
 /* catalog.css */
 
-.bg-sale {
-    background-color: red;
-    color: #fff;
+.main-title {
+    margin-left: 5rem;
 }
 
-.product-container {
+.best-products {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    .product {
+        flex: 0 0 auto;
+        margin-right: 2rem;
+    }
+}
+
+.product-container,
+.best-products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    gap: 0.3rem;
+    gap: 2rem;
+    margin: 1rem 5rem;
 
     & .product {
         overflow: hidden;
         position: relative;
         height: 20rem;
-        max-width: 12rem;
+        max-width: 14rem;
 
         .icons {
             position: absolute;
@@ -33,23 +46,54 @@
                 text-align: center;
             }
             a:hover {
-                background-color: var(--anchor-active-color);
+                background-color: var(--primary-text-color);
                 color: #fff; 
             }
         }
 
         .image {
+
             .badge {
                 display: inline-block;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
                 text-align: center;
-                vertical-align: baseline;
+                vertical-align: middle;
                 font-size: 0.75rem;
-                padding: 0.35rem 0.45rem;
                 position: absolute;
                 top: 0;
                 left: 0;
                 z-index: 10;
+                clip-path: polygon(49% 3%, 38% 11%, 24% 8%, 19% 21%, 5% 25%, 11% 37%, 0 49%, 11% 58%, 4% 71%, 20% 78%, 21% 94%, 38% 89%, 51% 100%, 66% 89%, 84% 94%, 84% 79%, 98% 68%, 88% 57%, 98% 46%, 85% 36%, 93% 24%, 79% 20%, 76% 6%, 59% 10%);
             }
+              
+            .badge.sold::before,
+            .badge.sale::before,
+            .badge.new::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+              
+            .badge.sold {
+                background-color: rgba(255, 0, 0, 0.1);
+                color: #8b0000;
+            }
+              
+            .badge.sale {
+                background-color: rgba(255, 255, 0, 0.2);
+                color: #9e7a18;
+            }
+              
+            .badge.new {
+                background-color: rgba(0, 255, 0, 0.1);
+                color: #024200; 
+            }         
 
             img {
                 object-fit: cover;
@@ -120,11 +164,6 @@
         grid-template-columns: 15rem auto;
     }
 }
-
-/*ul.categories a:hover {
-    color: var(--anchor-active-color);
-    text-decoration: underline;
-}*/
 
 ul.categories li:nth-child(even) {
     background-color: rgb(230, 213, 227);

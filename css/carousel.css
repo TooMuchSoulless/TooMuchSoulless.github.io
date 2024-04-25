@@ -8,7 +8,7 @@
 }
 
 .slider {
-    height: 100px;
+    height: 250px;
     margin: auto;
     overflow: hidden;
     position: relative;
@@ -17,18 +17,19 @@
 }
 
 .slide-track {
+    height: 250px;
     display: flex;
     width: calc(250px*14);
     animation: carousel 40s linear infinite alternate;
 }
 
 .slide {
-    height: 100px;
+    height: 250px;
     width: 250px;
 }
 
 .slide img {
-    height: 100px;
+    height: 250px;
     width: 250px;
     display: block;
     max-width: 100%;
@@ -51,8 +52,8 @@
 
 .category-item-title {
     display: inline-block;
-    color: black;
-    background-color: white;
+    color: var(--primary-text-color);
+    background-color: rgba(255, 255, 255, 0.5);
     font-size: 0.8rem;
     text-transform: uppercase;
     position: absolute;
@@ -60,12 +61,13 @@
     left: 50%;
     padding: 0.5rem 1rem;
     transform: translate(-50%, -50%);
+    border-radius: 0.4em;
 }
 
 .slider::before, .slider::after {
     background: linear-gradient(to right, #fff 0, rgb(255 255 255 / 0) 100%);
     content: '';
-    height: 100px;
+    height: 250px;
     position: absolute;
     width: 200px;
     z-index: 2;

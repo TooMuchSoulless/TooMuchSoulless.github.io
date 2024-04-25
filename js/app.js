@@ -87,7 +87,7 @@ function CardProduct(productList, item) {
       </div>
     `;
     
-    const showButton = this.item.querySelector(".show-details");
+    const showButton = item.querySelector(".show-details");
     const dialog = document.querySelector("dialog");
     const closeButton = dialog.querySelector("dialog .close");
     let dialogMain = dialog.querySelector("dialog .dialog-main");
@@ -337,8 +337,8 @@ function ProductList(products) {
             <a href="#!" class="fas fa-eye show-details"></a>
         </div>
         <div class="image">
-            <div class="badge bg-${product.badge.bg}">${product.badge.title}</div>
-            <img src="${product.image}" alt="${product.name}">
+            <div class="badge bg-${product.badge.bg} ${product.badge.title.toLowerCase()}">${product.badge.title}</div>
+            <div class="img-container"><img src="${product.image}" alt="${product.name}"></div>
         </div>
         <div class="content" data-id="${product.id}">
             <h3 class="product-name">${product.name}</h3>
@@ -405,6 +405,7 @@ const populateCategories = (categoryContainer, categories) => {
 
 function renderCategory(productContainer, selector, products) {
     const categoryItems = document.querySelectorAll(selector);
+    let productList = new ProductList(products);
 
     categoryItems.forEach(item => item.addEventListener('click', event => {
         event.preventDefault();
@@ -428,6 +429,7 @@ const sortingOptions = () => sortingOrders.map(item => `<option value="${item.ke
 
 function renderSelect(selectPicker, products, productContainer) {
     selectPicker.innerHTML = sortingOptions();
+    let productList = new ProductList(products);
 
     selectPicker.addEventListener('change', function() {
         switch(this.value) {
@@ -484,6 +486,7 @@ const renderList = (products, value) => productList.populateProductList(products
 
 const renderShowOnly = (showOnly, products, productContainer) => {
     let badges = [...new Set([...products.map(item => item.badge.title)].filter(item => item != ''))];
+    let productList = new ProductList(products);
 
     showOnly.innerHTML = badges.map(item => badgeTemplate(item)).join("");
     let checkboxes = showOnly.querySelectorAll('input[name="badge"]');
@@ -679,58 +682,202 @@ function main() {
         })
     }
 
+    function fetchBestProducts() {
+        const url = "https://my-json-server.typicode.com/TooMuchSoulless/db";
+        const bestProductsContainer = document.querySelector('.best-products');
+    
+        if (bestProductsContainer) {
+            fetchData(`${url}/products`)
+            .then(products => {
+                const bestProducts = products.filter(product => product.stars === 5);
+                bestProductsContainer.innerHTML = populateProductList(bestProducts);
+
+                let productList = new ProductList(products);
+
+                const productCards = bestProductsContainer.querySelectorAll('.product');
+                productCards.forEach(item => new CardProduct(productList, item));
+            });
+        }
+    }
+
+    function populateProductList(products) {
+        let content = "";
+        products.forEach(item => content += productTemplate(item));
+        return content;
+    }
+
+    const productTemplate = (product) => `
+        <article class="product" data-id="${product.id}">
+            <div class="icons">
+                <a href="#!" class="fas fa-shopping-cart add-to-cart"></a>
+                <a href="#!" class="fas fa-heart add-to-wishlist"></a>
+                <a href="#!" class="fas fa-eye show-details"></a>
+            </div>
+            <div class="image">
+                <div class="badge bg-${product.badge.bg} ${product.badge.title.toLowerCase()}">${product.badge.title}</div>
+                <img src="${product.image}" alt="${product.name}">
+            </div>
+            <div class="content" data-id="${product.id}">
+                <h3 class="product-name">${product.name}</h3>
+                <span> <span class="price product-price">${product.price}</span></span> <span class="stars">${starsTemplate(product.stars)}</span> 
+            </div>
+        </article>
+    `;
+
+    fetchBestProducts();
+
+    function CardProduct(productList, item) {
+        this.item = item;
+    
+        const detailTemplate = (item) =>  `
+        <div class="detail-container">
+            <div class="col-left">
+                <img src="${item.image}">
+            </div>
+            <div class="col-right">
+                <div class="info-container">
+                    <h2 class="info-header">${item.name}</h2>
+
+                    <div class="info-price">Price: <span class="price">${item.price}</span></div>
+                    <div class="info-shipping">Free shipping</div>
+                    
+                    <div class="info-button to-cart" data-id="${item.id}">
+                        <a href="#!" class="btn btn-submit add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+                    </div>
+
+                    <h2 class="qty-header py-2">Amount:</h2>     
+                        
+                    <div class="qty qty-buttons">
+                        <div class="number-input quantity" data-id="${item.id}">
+                            <button class="btn btn-dec">-</button>
+                            <input class="quantity-result"
+                                            type="number" 
+                                            value="1"
+                                            min="1"
+                                            max="10"
+                                            required 
+                                            />
+                            <button class="btn btn-inc">+</button>
+                        </div>
+                    </div>
+
+                    <div class="info-description">${item.description}</div>
+                    <div class="info-link">
+                    <a class="btn-link far fa-heart add-to-wishlist" href="#!" data-id="${item.id}">&nbsp;Add to wish list</a>
+                    </div>
+                </div>    
+            
+            </div>
+        </div>
+        `;
+    
+        const showButton = item.querySelector(".show-details");
+        const dialog = document.querySelector("dialog");
+        const closeButton = dialog.querySelector(".close");
+        let dialogMain = dialog.querySelector(".dialog-main");
+    
+        function renderModal(modal) {
+            modal.querySelector('.btn-inc').addEventListener('click', e => {
+                let val = e.target.previousElementSibling.value;
+                val++;
+                e.target.previousElementSibling.value = val;
+            });
+    
+            modal.querySelector('.btn-dec').addEventListener('click', e => {
+                let val = e.target.nextElementSibling.value;
+                if (val > 1) {
+                    val--;
+                }
+                e.target.nextElementSibling.value = val;
+            });
+    
+            let quantityResult = modal.querySelector('.quantity-result');
+            let addToCart = modal.querySelector('.add-to-cart');
+            
+            addToCart.addEventListener('click', e => {
+                let id = e.target.closest('.to-cart').dataset.id;
+                let product = productList.getProductById(id);
+                product = {...product, amount: +quantityResult.value};
+                shoppingCart.addItemToCart(product);
+            })
+        }
+    
+        function showModal(event) {
+            let parent = event.target.closest(".product");
+            let id = parent.dataset.id;
+            dialogMain.innerHTML = detailTemplate(productList.getProductById(id));
+
+            const scrollY = window.scrollY;
+            const offsetY = parent.getBoundingClientRect().top + scrollY;
+
+            dialog.style.top = `${offsetY}px`;
+
+            dialog.showModal();
+
+            window.scrollTo(0, scrollY);
+
+            renderModal(dialogMain);
+        }
+    
+        showButton.addEventListener("click", showModal);
+        closeButton.addEventListener("click", () => dialog.close());
+    
+        const addToCartButton = this.item.querySelector(".add-to-cart");
+    
+        addToCartButton.addEventListener("click", this);
+    
+        this.handleEvent = function (event) {
+            let parent = event.target.closest(".product");
+            let id = parent.dataset.id;
+            let product = productList.getProductById(id);
+            product = { ...product, amount: 1 };
+            shoppingCart.addItemToCart(product);
+        };
+    }
+
 }
 
 const template = document.createElement('template');
 
 template.innerHTML = `
-<footer class="mb-3">
+<footer>
     <div class="container page-footer">
         <section class="footer-main">
             <div class="footer-main-item">
-                <h2 class="footer-title">About</h2>
+                <h2 class="footer-title">ABOUT</h2>
                 <ul>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Materials</a></li>
+                    <li><a href="#">Certificate</a></li>
                     <li><a href="#">Customers</a></li>
-                    <li><a href="#">Careers</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
                 </ul>
             </div>
 
             <div class="footer-main-item">
-                <h2 class="footer-title">Resources</h2>
+                <h2 class="footer-title">CUSTOMER CARE</h2>
                 <ul>
-                    <li><a href="#">Docs</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">eBooks</a></li>
-                    <li><a href="#">Webinars</a></li>
+                    <li><a href="#">Sizing</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Warranty</a></li>
                 </ul>
             </div>
 
             <div class="footer-main-item">
-                <h2 class="footer-title">Contact</h2>
+                <h2 class="footer-title">SOCIALS</h2>
                 <ul>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Sales</a></li>
-                    <li><a href="#">Advertise</a></li>
+                    <li><a href="https://www.instagram.com/instagram/?hl=uk"><i class="fab fa-instagram social-media"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-facebook social-media"></i> Facebook</a></li>
+                    <li><a href="https://www.pinterest.com.au/"><i class="fab fa-pinterest"></i> Pinterest</a></li>
+                    <li><a href="./exercises/index.html">My Exercises</a></li>
                 </ul>
             </div>
         </section>
 
-        <section class="footer-social py-3">
-            <ul class="footer-social-list-unstyled">
-                <li><a href="https://www.facebook.com/facebookIndia"><i class="fab fa-facebook social-media"></i></a></li>
-                <li><a href="https://twitter.com/X"><i class="fab fa-twitter social-media"></i></a></li>
-                <li><a href="https://www.instagram.com/instagram/?hl=uk"><i class="fab fa-instagram social-media"></i></a></li>
-                <li><a href="https://github.com/TooMuchSoulless/TooMuchSoulless.github.io"><i class="fab fa-github social-media"></i></a></li>
-                <li><a href="https://www.linkedin.com/company/linkedin/"><i class="fab fa-linkedin social-media"></i></a></li>
-                <li><a href="https://www.youtube.com/@LofiGirl"><i class="fab fa-youtube social-media"></i></a></li>
-            </ul>
-        </section>
-
-        <section class="footer-legal">
+        <section class="footer-legal px-2">
             <ul class="footer-legal-list">
+                <a href="index.html" class="brand mr-5"><img src="./logo-2.png" alt="Logo" width="150"></a>
+
                 <li><a href="#">Terms &amp; Conditions</a></li>
                 <li><a href="#">Privacy Policy</a></li>
                 <li><a href="#"> &copy; 2024 Copyright Shopaholic Inc.</a></li>
