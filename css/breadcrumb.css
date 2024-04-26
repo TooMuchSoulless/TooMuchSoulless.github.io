@@ -1,16 +1,15 @@
 .breadcrumb-bg-light {
-    background-color: rgb(161 161 161 / 0.1);
+    background-color: var(--primary-text-color);
 }
 
 .breadcrumb-container {
-    --breadcrumb-active-color: rgb(0 0 0 / 0.5);
-    --breadcrumb-color: indigo;
     --breadcrumb-divider: '/';
     display: flex;
     justify-content: space-between;
     padding-top: 2rem;
 
     & .breadcrumb-title {
+        color: var(--secondary-text-color);
         font-size: 1.1rem;
     }
     
@@ -29,11 +28,11 @@
         }
 
         & .breadcrumb-item.active {
-            color: var(--breadcrumb-active-color);
+            color: var(--quaternary-text-color);
         }
 
         & .breadcrumb-item a:hover {
-            color: var(--breadcrumb-active-color);
+            color: var(--tertiary-text-color);
         }
 
         & .breadcrumb-item+.breadcrumb-item {

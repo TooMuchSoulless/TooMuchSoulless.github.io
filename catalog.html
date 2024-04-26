@@ -6,6 +6,10 @@
     <title>Catalog</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -13,19 +17,21 @@
     <header class="page-header mb-3">
 
         <!--brand-->
-        <a href="index.html" class="brand">Shopaholic</a>
+        <a href="index.html" class="brand"><img src="./logo.jpeg" alt="Logo" width="150"></a>
+        <label for="toggler">&nbsp;<i class="fas fa-bars"></i>&nbsp;</label>
+        <input type="checkbox" id="toggler">
 
         <!--navigation-->
         <nav class="navbar">
 
-            <a href="./index.html">Home page</a>
+            <a href="./index.html">Home</a>
             <a href="./catalog.html">Catalog</a>
             <a href="./blog.html">Blog</a>
             <a href="./about.html">About</a>
             <a href="./contact.html">Contact</a>
             
         </nav>
-
+        
         <nav class="toolbar">
 
             <a href="#" class="far fa-heart"></a>
@@ -36,7 +42,7 @@
 
     </header>
 
-    <section class="breadcrumb-bg-light mt-5">
+    <section class="breadcrumb-bg-light mt-5 mb-4">
 
         <div class="container px-5 py-3">
 
@@ -64,12 +70,12 @@
             <div class="sidebar-wrapper">
 
                 <header>
-                    <h2 class="text-uppercase">Categories</h2>
+                    <h2 class="text-uppercase px-4 py-3">Categories</h2>
                 </header>
 
                 <span id="category-container"></span>
 
-                <h2 class="text-uppercase mb-4">Show only</h2>
+                <h2 class="text-uppercase mt-5 mb-3 px-4">Show only</h2>
 
                 <span class="show-only"></span>
 
@@ -83,7 +89,7 @@
 
                 <header class="header">
 
-                    <h2 class="text-center">Our <span>Products</span></h2>
+                    <h2 class="text-center mb-4">Our <span>Products</span></h2>
 
                 </header>
 
@@ -91,7 +97,7 @@
                     
                     <div class="col mb-2 mb-lg-0">
 
-                        <p class="text-sm text-muted mb-0">Showing 1–12 of 53 results</p>
+                        <p class="text-sm text-muted mb-0 py-3">Showing 1–14 of 15 results</p>
 
                     </div>
 

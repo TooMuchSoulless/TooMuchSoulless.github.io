@@ -7,10 +7,10 @@
             "bg": "primary"
          },
          "image": "https://toomuchsoulless.github.io/images/product-1.jpg",
-         "name": "Kui Ye Chen’s AirPods",
-         "price": 250,
-         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-         "stars": 2,
+         "name": "GemGlow Anklet",
+         "price": 337,
+         "description": "Elevate your ankle adornment with our stunning GemGlow Anklet, featuring radiant gemstones that shimmer with every step.",
+         "stars": 4,
          "category": 1
       },
       {
@@ -20,9 +20,9 @@
             "bg": ""
          },
          "image": "https://toomuchsoulless.github.io/images/product-2.jpg",
-         "name": "Air Jordan 12 gym red",
-         "price": 303,
-         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+         "name": "Gemstone Gleam Bracelet",
+         "price": 482,
+         "description": "Adorn your wrist with sophistication and sparkle with our Gemstone Gleam Bracelet, crafted from delicate chain links and showcasing a mesmerizing gemstone centerpiece.",
          "stars": 5,
          "category": 2
       },
@@ -33,9 +33,9 @@
             "bg": "primary"
          },
          "image": "https://toomuchsoulless.github.io/images/product-3.jpg",
-         "name": "Cyan cotton t-shirt",
-         "price": 25,
-         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+         "name": "Gemstone Cascade Earrings",
+         "price": 280,
+         "description": "Dazzle and sway with every step in our Gemstone Cascade Earrings, where exquisite gemstones elegantly descend like shimmering waterfalls, adding a touch of glamour to any ensemble.",
          "stars": 4,
          "category": 3
       },
@@ -46,11 +46,11 @@
             "bg": ""
          },
          "image": "https://toomuchsoulless.github.io/images/product-4.jpg",
-         "name": "Timex Unisex Originals",
-         "price": 151,
-         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-         "stars": 1,
-         "category": 1
+         "name": "Twilight Gemstone Necklace",
+         "price": 398,
+         "description": "Indulge in timeless elegance with our Twilight Gemstone Necklace, where ethereal beauty meets exquisite craftsmanship, adorned with captivating gemstones that dance delicately along the neckline.",
+         "stars": 4,
+         "category": 4
       },
       {
          "id": 5,
@@ -59,11 +59,11 @@
             "bg": "primary"
          },
          "image": "https://toomuchsoulless.github.io/images/product-5.jpg",
-         "name": "Red digital smartwatch",
-         "price": 150,
-         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-         "stars": 0,
-         "category": 4
+         "name": "Radiant Solitaire Gem Pendant",
+         "price": 271,
+         "description": "Elevate your elegance with our Radiant Solitaire Gem Pendant, a stunning centerpiece showcasing a single, sparkling gemstone, exuding timeless beauty and sophistication.",
+         "stars": 4,
+         "category": 5
       },
       {
          "id": 6,
@@ -72,11 +72,11 @@
             "bg": ""
          },
          "image": "https://toomuchsoulless.github.io/images/product-6.jpg",
-         "name": "Nike air max 95",
+         "name": "Sparkle Gemstone Ring",
          "price": 311,
-         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-         "stars": 5,
-         "category": 5
+         "description": "Adorn your finger with enchanting elegance in our Sparkle Gemstone Ring, where the brilliance of the gemstone steals the spotlight, making every gesture a captivating moment.",
+         "stars": 4,
+         "category": 6
       },
       {
          "id": 7,
@@ -85,11 +85,11 @@
             "bg": "primary"
          },
          "image": "https://toomuchsoulless.github.io/images/product-7.jpg",
-         "name": "Joemalone Women prefume",
-         "price": 35,
-         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+         "name": "Eternal Love Bridal Set",
+         "price": 1206,
+         "description": "Evoke timeless romance on your special day with our Eternal Love Bridal Set, a stunning ensemble of meticulously crafted jewelry designed to symbolize the eternal bond of love and commitment.",
          "stars": 4,
-         "category": 6
+         "category": 7
       },
       {
          "id": 8,
@@ -98,11 +98,11 @@
             "bg": ""
          },
          "image": "https://toomuchsoulless.github.io/images/product-8.jpg",
-         "name": "Apple Watch",
+         "name": "Timeless Charmed Bracelet",
          "price": 425,
-         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-         "stars": 3,
-         "category": 4
+         "description": "Capture moments that last a lifetime with our Timeless Charmed Bracelet, featuring a delicate clock charm amidst an array of enchanting symbols, each representing cherished memories and timeless elegance.",
+         "stars": 4,
+         "category": 8
       },
       {
          "id": 9,
@@ -111,11 +111,11 @@
             "bg": "primary"
          },
          "image": "https://toomuchsoulless.github.io/images/product-9.jpg",
-         "name": "Men silver Byron Watch",
+         "name": "LuxorCuff Bracelet",
          "price": 551,
-         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+         "description": "Elevate your wristwear with our LuxorCuff Bracelet, a sleek and sophisticated accessory designed to add a touch of modern elegance to any ensemble.",
          "stars": 5,
-         "category": 4
+         "category": 9
       },
       {
          "id": 10,
@@ -124,11 +124,11 @@
             "bg": "primary"
          },
          "image": "https://toomuchsoulless.github.io/images/product-10.jpg",
-         "name": "Ploaroid one step camera",
-         "price": 166,
-         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-         "stars": 0,
-         "category": 1
+         "name": "Graceful Luminance Lariat",
+         "price": 349,
+         "description": "Embrace effortless sophistication with our Graceful Luminance Lariat, a mesmerizing piece that delicately drapes to enhance any neckline with timeless allure.",
+         "stars": 5,
+         "category": 10
       },
       {
          "id": 11,
@@ -137,11 +137,11 @@
             "bg": "primary"
          },
          "image": "https://toomuchsoulless.github.io/images/product-11.jpg",
-         "name": "Gray Nike running shoes",
-         "price": 123,
-         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-         "stars": 5,
-         "category": 5
+         "name": "Opulent Collar Necklace",
+         "price": 418,
+         "description": "Elevate your look with regal elegance in our Opulent Collar Necklace, a stunning accessory that exudes sophistication and adds a touch of luxury to any outfit.",
+         "stars": 4,
+         "category": 11
       },
       {
          "id": 12,
@@ -150,11 +150,50 @@
             "bg": "primary"
          },
          "image": "https://toomuchsoulless.github.io/images/product-12.jpg",
-         "name": "Black DSLR lense",
-         "price": 100,
-         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-         "stars": 2,
-         "category": 1
+         "name": "Regal Choker Necklace",
+         "price": 300,
+         "description": "Indulge in timeless sophistication with our Regal Choker Necklace, a luxurious piece that graces the neckline with opulent elegance, perfect for adding a touch of glamour to any ensemble.",
+         "stars": 5,
+         "category": 11
+      },
+      {
+         "id": 13,
+         "badge": {
+            "title": "",
+            "bg": ""
+         },
+         "image": "https://toomuchsoulless.github.io/images/product-13.jpg",
+         "name": "Classic Sparkle Studs",
+         "price": 184,
+         "description": "Elevate your everyday style with our Classic Sparkle Studs, the perfect combination of simplicity and sophistication, designed to add a touch of sparkle to any ensemble.",
+         "stars": 4,
+         "category": 12
+      },
+      {
+         "id": 14,
+         "badge": {
+            "title": "",
+            "bg": ""
+         },
+         "image": "https://toomuchsoulless.github.io/images/product-14.jpg",
+         "name": "GleamLoop Hoops",
+         "price": 259,
+         "description": "Step into the spotlight with our GleamLoop Hoops, crafted to catch the light and elevate your style with effortless sophistication and shine.",
+         "stars": 5,
+         "category": 13
+      },
+      {
+         "id": 15,
+         "badge": {
+            "title": "",
+            "bg": ""
+         },
+         "image": "https://toomuchsoulless.github.io/images/product-15.jpg",
+         "name": "Shimmering Accent Ring",
+         "price": 336,
+         "description": "Enhance your elegance with our Shimmering Accent Rings, featuring exquisite side stones that add sparkle and allure to every gesture.",
+         "stars": 4,
+         "category": 14
       }
    ],
    
@@ -163,74 +202,87 @@
       {
          "id": 1,
          "image": "https://toomuchsoulless.github.io/images/product-1.jpg",
-         "section": "Electronics",
-         "name": "Headphones"
+         "section": "Anklets",
+         "name": "String Anklets"
       },
       {
          "id": 2,
-         "name": "Bags",
          "image": "https://toomuchsoulless.github.io/images/product-2.jpg",
-         "section": "Health & Beauty"
+         "section": "Bracelets",
+         "name": "Chain Bracelets"
       },
       {
          "id": 3,
          "image": "https://toomuchsoulless.github.io/images/product-3.jpg",
-         "name": "T-Shirts",
-         "section": "Fashion & Acc"
+         "section": "Earrigs",
+         "name": "Chandelier Earrings"
+         
       },
       {
          "id": 4,
          "image": "https://toomuchsoulless.github.io/images/product-4.jpg",
-         "name": "Smartwatches",
-         "section": "Electronics"
+         "section": "Necklaces",
+         "name": "Negligee Necklaces"
       },
       {
          "id": 5,
          "image": "https://toomuchsoulless.github.io/images/product-5.jpg",
-         "name": "Shoes",
-         "section": "Fashion & Acc"
+         "section": "Pendants",
+         "name": "Solitaire Pendants"
       },
       {
          "id": 6,
-         "image": "https://toomuchsoulless.github.io/images/product-7.jpg",
-         "name": "Parphume",
-         "section": "Health & Beauty"
+         "image": "https://toomuchsoulless.github.io/images/product-6.jpg",
+         "section": "Rings",
+         "name": "Cocktail Rings"
       },
       {
          "id": 7,
-         "image": "https://toomuchsoulless.github.io/images/product-9.jpg",
-         "name": "Watches",
-         "section": "Health & Beauty"
+         "image": "https://toomuchsoulless.github.io/images/product-7.jpg",
+         "section": "Sets",
+         "name": "Bridal Sets"
       },
       {
          "id": 8,
          "image": "https://toomuchsoulless.github.io/images/product-8.jpg",
-         "name": "Apple Watch",
-         "section": "Electronics"
+         "section": "Bracelets",
+         "name": "Charm Bracelets"
       },
       {
          "id": 9,
          "image": "https://toomuchsoulless.github.io/images/product-9.jpg",
-         "name": "Byron Watch",
-         "section": "Health & Beauty"
+         "section": "Bracelets",
+         "name": "Cuff Bracelets"
       },
       {
          "id": 10,
          "image": "https://toomuchsoulless.github.io/images/product-10.jpg",
-         "name": "Camera",
-         "section": "Electronics"
+         "section": "Necklaces",
+         "name": "Lariat Necklaces"
       },
       {
          "id": 11,
          "image": "https://toomuchsoulless.github.io/images/product-11.jpg",
-         "name": "Nike shoes",
-         "section": "Fashion & Acc"
+         "section": "Necklaces",
+         "name": "Chocker Necklaces"
       },
       {
          "id": 12,
          "image": "https://toomuchsoulless.github.io/images/product-12.jpg",
-         "name": "DSLR lense",
-         "section": "Electronics"
+         "section": "Earrigs",
+         "name": "Stud Earrings"
+      },
+      {
+         "id": 13,
+         "image": "https://toomuchsoulless.github.io/images/product-13.jpg",
+         "section": "Earrigs",
+         "name": "Hoop Earrings"
+      },
+      {
+         "id": 14,
+         "image": "https://toomuchsoulless.github.io/images/product-14.jpg",
+         "section": "Rigs",
+         "name": "Side Stone Rigs"
       }
    ]
 }

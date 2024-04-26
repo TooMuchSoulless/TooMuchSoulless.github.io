@@ -9,15 +9,145 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 2rem;
+    margin: 1rem 5rem;
 
-    .product {
-        flex: 0 0 auto;
-        margin-right: 2rem;
+    & .product {
+        overflow: hidden;
+        position: relative;
+        height: 20rem;
+        max-width: 14rem;
+
+        .icons {
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+            z-index: -1;
+            
+            a {
+                background-color: #fff;
+                color: var(--anchor-color);
+                display: block;
+                margin-top: 0.5rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                line-height: 1.5rem;
+                text-align: center;
+            }
+            a:hover {
+                background-color: var(--primary-text-color);
+                color: #fff; 
+            }
+        }
+
+        .image {
+
+            .badge {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                vertical-align: middle;
+                font-size: 0.75rem;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 10;
+                clip-path: polygon(49% 3%, 38% 11%, 24% 8%, 19% 21%, 5% 25%, 11% 37%, 0 49%, 11% 58%, 4% 71%, 20% 78%, 21% 94%, 38% 89%, 51% 100%, 66% 89%, 84% 94%, 84% 79%, 98% 68%, 88% 57%, 98% 46%, 85% 36%, 93% 24%, 79% 20%, 76% 6%, 59% 10%);
+            }
+                
+            .badge.sold::before,
+            .badge.sale::before,
+            .badge.new::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+                
+            .badge.sold {
+                background-color: rgba(255, 0, 0, 0.1);
+                color: #8b0000;
+            }
+                
+            .badge.sale {
+                background-color: rgba(255, 255, 0, 0.2);
+                color: #9e7a18;
+            }
+                
+            .badge.new {
+                background-color: rgba(0, 255, 0, 0.1);
+                color: #024200; 
+            }         
+
+            img {
+                object-fit: cover;
+                max-width: 100%;
+                display: block;
+                height: 15rem;
+            }
+        }
+
+        .content {
+            padding: 0.5rem;
+            h3 {
+                padding-bottom: 0.5rem;
+                text-align: center;
+                font-size: 1em;
+                
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                overflow-wrap: break-word;
+                max-width: 100%;
+                transition: font-size 0.3s ease;
+                /*щоб сховати назву товару 1.0*/
+                /*position: absolute;
+                bottom: -3rem;
+                left: 0;
+                right: 0;
+                z-index: 10;*/
+            }
+            .price {
+                font-weight: 500;
+                font-size: 0.8rem;
+                color: var(--anchor-active-color);
+            }
+            .price::before {
+                color: var(--anchor-active-color);
+                content: var(--currency-symbol);
+            }
+            /*.price:nth-of-type(1) {
+                float: left;
+                text-decoration: line-through;
+            }*/
+            .price:nth-of-type(1) {
+                float: right;
+                color: var(--anchor-color);
+            }
+            .price:nth-of-type(1)::before {
+                color: var(--anchor-color);
+            }
+            .price:empty {
+                display: none;
+            }
+        }
+    }
+    /*щоб сховати назву товару 2.0/
+    .product:hover h3 {
+        bottom: 2rem;
+    }*/
+    .product:hover .icons {
+        z-index: 10;
     }
 }
 
-.product-container,
-.best-products {
+.product-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     gap: 2rem;
@@ -157,16 +287,48 @@
     }
 }
 
+.sidebar-wrapper {
+
+    .bg-dark {
+        background-color: var(--quaternary-text-color);
+    }
+    
+    .text-white {
+        color: var(--secondary-text-color);
+        text-transform: uppercase;
+    }
+
+    .list-unstyled {
+        list-style: none;
+    }
+
+    ul.categories {
+        margin-bottom: 0.8rem;
+    }
+    
+    ul.categories li a {
+        color: var(--anchor-color);
+        text-decoration: none;
+        font-size: 1rem;
+    }
+    
+    ul.categories li a:hover {
+        color: var(--primary-text-color);
+        font-weight: 600;
+    }
+    
+    ul.categories li:nth-child(even) {
+        background-color: var(--tertiary-text-color);
+    }
+
+}
+
 @media (min-width: 35rem) {
     #catalog {
         display: grid;
         gap: 1em;
         grid-template-columns: 15rem auto;
     }
-}
-
-ul.categories li:nth-child(even) {
-    background-color: rgb(230, 213, 227);
 }
 
 .row {
@@ -184,7 +346,7 @@ ul.categories li:nth-child(even) {
     padding: 0.375rem 2.25rem 0.375rem 0.75rem;
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1;
+    line-height: 1.5;
     color: #212529;
     background-color: #fff;
     background-image: url("data:image/svg+xml, %3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
@@ -200,9 +362,9 @@ ul.categories li:nth-child(even) {
 }
 
 .form-select:focus {
-    border-color: #eed8a5;
+    border-color: var(--quaternary-text-color);
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(220, 177, 74, 0.25);
+    box-shadow: 0 0 0 0.25rem var(--tertiary-text-color);
 }
 
 .form-select-lg {
@@ -218,10 +380,13 @@ ul.categories li:nth-child(even) {
     margin-left: 1.5em;
 }
 
+.form-check:last-child {
+    margin-bottom: 3rem;
+}
+
 .form-check-input {
     width: 1em;
     height: 1em;
-    margin-top: 0.25em;
     vertical-align: top;
     background-color: #fff;
     background-repeat: no-repeat;
@@ -245,14 +410,14 @@ ul.categories li:nth-child(even) {
 }
 
 .form-check-input:focus {
-    border-color: #a3a8ee;
+    border-color: var(--quaternary-text-color);
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(70, 80, 221, 0.25);
+    box-shadow: 0 0 0 0.2rem var(--tertiary-text-color);
 }
 
 .form-check-input:checked {
-    background-color: #4650dd;
-    border-color: #4650dd;
+    background-color: var(--anchor-active-color);
+    border-color: var(--tertiary-text-color);
 }
 
 .form-check-input:checked[type="checkbox"]  {
@@ -260,7 +425,7 @@ ul.categories li:nth-child(even) {
 }
 
 .form-check-input[type="checkbox"]:indeterminate {
-    background-color: #4650dd;
-    border-color: #4650dd;
+    background-color: var(--anchor-active-color);
+    border-color: var(--tertiary-text-color);
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
 }

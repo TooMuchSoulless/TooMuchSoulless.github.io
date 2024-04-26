@@ -476,13 +476,17 @@ function Store() {
 }
 
 const badgeTemplate = (item) => `
-<div class="form-check mb-1">
+<div class="form-check mb-3">
     <input class="form-check-input" type="checkbox" id="id-${item}" value="${item}" name="badge">
-    &nbsp;<label class="form-check-label" for="id-${item}">${item}</label>
+    &nbsp; <label class="form-check-label" for="id-${item}">${item}</label>
 </div>
 `;
 
-const renderList = (products, value) => productList.populateProductList(products.filter(product => product.badge.title.includes(value)));
+const renderList = (products, value) => {
+    let filteredProducts = products.filter(product => product.badge.title.includes(value));
+    let productList = new ProductList(filteredProducts);
+    return productList.populateProductList(filteredProducts);
+};
 
 const renderShowOnly = (showOnly, products, productContainer) => {
     let badges = [...new Set([...products.map(item => item.badge.title)].filter(item => item != ''))];
@@ -497,23 +501,23 @@ const renderShowOnly = (showOnly, products, productContainer) => {
         item.addEventListener("change", event => {
             if(event.target.checked) {
                 values.push(item.value);
-                productContainer.innerHTML = values.map(value => renderList(products, value)).join("");
             } else {
-                if (values.length != 0) {
-                    values.pop(item.value);
-                    productContainer.innerHTML = values.map(value => renderList(products, value)).join("");
-                }
+                values = values.filter(value => value !== item.value);
             }
 
-            if (values.length == 0) {
-                productContainer.innerHTML = productList.populateProductList(products);
+            let filteredProducts = products.filter(product => values.some(value => product.badge.title.includes(value)));
+
+            if (values.length === 0) {
+                filteredProducts = products;
             }
+
+            productContainer.innerHTML = productList.populateProductList(filteredProducts);
 
             let productCards = productContainer.querySelectorAll('.product');
             productCards.forEach(item => new CardProduct(item));
-        })
-    })
-}
+        });
+    });
+};
 
 let shoppingCart = new Cart();
 
@@ -880,7 +884,7 @@ template.innerHTML = `
 
                 <li><a href="#">Terms &amp; Conditions</a></li>
                 <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#"> &copy; 2024 Copyright Shopaholic Inc.</a></li>
+                <li><a href="#"> &copy; 2024 Copyright Hermosa Inc.</a></li>
             </ul>
         </section>
     </div>
