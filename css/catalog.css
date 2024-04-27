@@ -9,7 +9,6 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     gap: 2rem;
     margin: 1rem 5rem;
 
@@ -17,7 +16,7 @@
         overflow: hidden;
         position: relative;
         height: 20rem;
-        max-width: 14rem;
+        flex-basis: calc(100% / 3 - 2rem);
 
         .icons {
             position: absolute;
@@ -87,9 +86,11 @@
 
             img {
                 object-fit: cover;
+                width: 100%;
                 max-width: 100%;
                 display: block;
                 height: 15rem;
+                display: block;
             }
         }
 
@@ -323,7 +324,7 @@
 
 }
 
-@media (min-width: 35rem) {
+@media (min-width: 45rem) {
     #catalog {
         display: grid;
         gap: 1em;
@@ -342,7 +343,7 @@
 
 .form-select {
     display: block;
-    width: 100%;
+    width: 380px;
     padding: 0.375rem 2.25rem 0.375rem 0.75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -365,6 +366,41 @@
     border-color: var(--quaternary-text-color);
     outline: 0;
     box-shadow: 0 0 0 0.25rem var(--tertiary-text-color);
+}
+
+
+@media (min-width: 1230px) and (max-width: 1918px) {
+    .form-select {
+        width: 380px;
+    }
+}
+
+@media (min-width: 1919px) {
+    .form-select {
+        width: 730px;
+    }
+}
+
+@media (max-width: 1229px) {
+    .form-select {
+        width: 200px;
+    }
+}
+
+@media (max-width: 60rem) {
+    .best-products {
+        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+        gap: 2rem;
+        margin: 1rem 5rem;
+    }
+
+    .best-products .product {
+        max-width: 20rem;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
 }
 
 .form-select-lg {

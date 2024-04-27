@@ -29,13 +29,13 @@
       {
          "id": 3,
          "badge": {
-            "title": "New",
+            "title": "Sale",
             "bg": "primary"
          },
          "image": "https://toomuchsoulless.github.io/images/product-3.jpg",
-         "name": "Gemstone Cascade Earrings",
+         "name": "Golden Blossom Cuff",
          "price": 280,
-         "description": "Dazzle and sway with every step in our Gemstone Cascade Earrings, where exquisite gemstones elegantly descend like shimmering waterfalls, adding a touch of glamour to any ensemble.",
+         "description": "Elevate your style with our Golden Blossom Cuff Earring, a stunning accessory that adds a touch of nature-inspired elegance to any look.",
          "stars": 4,
          "category": 3
       },
@@ -215,7 +215,7 @@
          "id": 3,
          "image": "https://toomuchsoulless.github.io/images/product-3.jpg",
          "section": "Earrigs",
-         "name": "Chandelier Earrings"
+         "name": "Cuffs"
          
       },
       {
