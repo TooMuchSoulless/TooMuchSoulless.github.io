@@ -7,6 +7,10 @@
     
     <link rel="stylesheet" href="./css/main.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,42 +18,44 @@
     <header class="page-header mb-3">
 
         <!--brand-->
-        <a href="index.html" class="brand">Shopaholic</a>
+        <a href="index.html" class="brand"><img src="./logo.jpeg" alt="Logo" width="150"></a>
+        <label for="toggler">&nbsp;<i class="fas fa-bars"></i>&nbsp;</label>
+        <input type="checkbox" id="toggler">
 
         <!--navigation-->
         <nav class="navbar">
 
-            <a href="./index.html">Home page</a>
+            <a href="./index.html">Home</a>
             <a href="./catalog.html">Catalog</a>
             <a href="./blog.html">Blog</a>
             <a href="./about.html">About</a>
             <a href="./contact.html">Contact</a>
             
         </nav>
-
+        
         <nav class="toolbar">
 
             <a href="#" class="far fa-heart"></a>
-            <a href="cart.html" class="fas fa-dolly-flatbed"></a>
+            <a href="cart.html" class="fas fa-dolly-flatbed">(<span id="cart-amount">0</span>)</a>
             <a href="#" class="far fa-user"></a>
 
         </nav>
 
     </header>
 
-    <section class="breadcrumb-bg-light mt-5">
+    <section class="breadcrumb-bg-light mt-5 mb-4">
 
         <div class="container px-5 py-3">
 
             <div class="breadcrumb-container">
 
                 <div class="breadcrumb-title">
-                    Contact us
+                    Contact
                 </div>
 
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                    <li class="breadcrumb-item active">Contacts</li>
+                    <li class="breadcrumb-item active">Contact</li>
                 </ul>
 
             </div>
@@ -58,125 +64,64 @@
         
     </section>
     
-    <!--<main>
+    <main>
 
-        <h1>Contact page</h1>
+        <section id="contact" class="mb-3 mt-5">
 
-    </main>-->
+            <div class="quote">
+                <h2 class="mb-3">Contact</h2>
+                <p class="mb-3">We <i>love</i> to <i>chat</i></p>
+                <span>Feel free to reach out here, we'd love to hear from you to help out with any questions and feedback you have! You can expect to hear back from us within 48 hours.</span>
+            </div>
 
-    <section id="contact" class="mb-3">
+            <div class="container py-2 px-5 mx-7">
 
-        <div class="container py-3 px-4">
+                <div class="contact-sidebar py-4">
+                    <img src="./images/contact.jpg" alt="Photo of a girl with jewellery" width="250">
+                </div>
 
-            <div class="contact-main">
+                <div class="contact-main">
 
-                <form action="www.site" class="form">
+                    <form action="www.site" class="form">
 
-                    <div class="form-container">
-                        <div class="input-group">
-                            <div>
-                                <label for="first-name" class="form-label">Your First Name *</label>
-                                <input type="text" class="form-control" id="first-name" placeholder="Your First Name here..." required>
+                        <div class="form-container py-5">
+                            <div class="input-group mb-3">
+                                <div>
+                                    <label for="first-name" class="form-label">Your First Name *</label>
+                                    <input type="text" class="form-control" id="first-name" placeholder="Your First Name here..." required>
+                                </div>
+                                <div>
+                                    <label for="last-name" class="form-label">Your Last Name *</label>
+                                    <input type="text" class="form-control" id="last-name" placeholder="Your Last Name here..." required>
+                                </div>
                             </div>
-                            <div>
-                                <label for="last-name" class="form-label">Your Last Name *</label>
-                                <input type="text" class="form-control" id="last-name" placeholder="Your Last Name here..." required>
+
+                            <div class="input-group mb-3">
+                                <label for="email" class="form-label">Your Email *</label>
+                                <input type="email" class="form-control" id="email" placeholder="Your Email here..." required>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <label for="message" class="form-label">Your message *</label>
+                                <textarea id="message" class="form-control" rows="4" placeholder="Drop your message here..." required></textarea>
+                            </div>
+
+                            <div class="input-group ">
+                                <button class="btn btn-primary" type="submit">Send message</button>
                             </div>
                         </div>
 
-                        <div class="input-group">
-                            <label for="email" class="form-label">Your Email *</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
+                    </form>
 
-                        <div class="input-group">
-                            <label for="message" class="form-label">Your message *</label>
-                            <textarea id="message" class="form-control" rows="4" placeholder="Drop your message here..." required></textarea>
-                        </div>
-
-                        <div class="input-group">
-                            <button class="btn btn-primary" type="submit">Send message</button>
-                        </div>
-                    </div>
-
-                </form>
+                </div>
 
             </div>
 
-            <div class="contact-sidebar">Sidebar</div>
+        </section>
 
-        </div>
-
-    </section>
+    </main>
     
-    <footer class="page-footer mb-3">
- 
-        <section class="footer-main">
-
-            <div class="footer-main-item">
-
-                <h2 class="footer-title">About</h2>
-                <ul>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Customers</a></li>
-                    <li><a href="#">Careers</a></li>
-                </ul>
-
-            </div>
-
-            <div class="footer-main-item">
-
-                <h2 class="footer-title">Resources</h2>
-                <ul>
-                    <li><a href="#">Docs</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">eBooks</a></li>
-                    <li><a href="#">Webinars</a></li>
-                </ul>
-
-            </div>
-
-            <div class="footer-main-item">
-
-                <h2 class="footer-title">Contact</h2>
-                <ul>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Sales</a></li>
-                    <li><a href="#">Advertise</a></li>
-                </ul>
-
-            </div>
-
-        </section>
-
-        <!-- Вправа 10 з домашнього завдання 5 -->
-        <section class="footer-social py-3">
-
-            <ul class="footer-social-list-unstyled">
-                <li><a href="https://www.facebook.com/facebookIndia"><i class="fab fa-facebook social-media"></i></a></li>
-                <li><a href="https://twitter.com/X"><i class="fab fa-twitter social-media"></i></a></li>
-                <li><a href="https://www.instagram.com/instagram/?hl=uk"><i class="fab fa-instagram social-media"></i></a></li>
-                <li><a href="https://github.com/TooMuchSoulless/TooMuchSoulless.github.io"><i class="fab fa-github social-media"></i></a></li>
-                <li><a href="https://www.linkedin.com/company/linkedin/"><i class="fab fa-linkedin social-media"></i></a></li>
-                <li><a href="https://www.youtube.com/@LofiGirl"><i class="fab fa-youtube social-media"></i></a></li>
-            </ul>
-
-        </section>
-
-        <!-- footer legal -->
-        <section class="footer-legal">
-
-            <ul class="footer-legal-list">
-                <li><a href="#">Terms &amp; Conditions</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#"> &copy; 2024 Copyright Shopaholic Inc.</a></li>
-            </ul>
-
-        </section>
-
-    </footer>
+    <script src="/js/app.js"></script>
 
 </body>
 </html>
