@@ -850,9 +850,9 @@ template.innerHTML = `
             <div class="footer-main-item">
                 <h2 class="footer-title">ABOUT</h2>
                 <ul>
-                    <li><a href="#">Materials</a></li>
-                    <li><a href="#">Certificate</a></li>
-                    <li><a href="#">Customers</a></li>
+                    <li><a href="https://toomuchsoulless.github.io/about.html#materials">Materials</a></li>
+                    <li><a href="https://toomuchsoulless.github.io/about.html#warranty">Warranty</a></li>
+                    <li><a href="https://toomuchsoulless.github.io/about.html#customers">Customers</a></li>
                     <li><a href="./blog.html">Blog</a></li>
                 </ul>
             </div>
@@ -863,7 +863,7 @@ template.innerHTML = `
                     <li><a href="#">Sizing</a></li>
                     <li><a href="#">Shipping</a></li>
                     <li><a href="#">Returns</a></li>
-                    <li><a href="#">Warranty</a></li>
+                    <li><a href="#">Certification</a></li>
                 </ul>
             </div>
 

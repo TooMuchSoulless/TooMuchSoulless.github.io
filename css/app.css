@@ -134,6 +134,11 @@
     padding-right: 3rem;
 }
 
+.px-7 {
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
 /*margin bottom*/
 .mb-0 {
     margin-bottom: 0;
@@ -163,8 +168,17 @@
     margin-right: 3rem;
 }
 
+.ml-5 {
+    margin-left: 3rem;
+}
+
 .mt-5 {
     margin-top: 3rem;
+}
+
+.mx-7 {
+    margin-left: 10rem;
+    margin-right: 10rem;
 }
 
 .d-inline-block {

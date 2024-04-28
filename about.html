@@ -7,6 +7,10 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png">
     <link rel="stylesheet" href="./css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,12 +18,14 @@
     <header class="page-header mb-3">
 
         <!--brand-->
-        <a href="index.html" class="brand">Shopaholic</a>
+        <a href="index.html" class="brand"><img src="./logo.jpeg" alt="Logo" width="150"></a>
+        <label for="toggler">&nbsp;<i class="fas fa-bars"></i>&nbsp;</label>
+        <input type="checkbox" id="toggler">
 
         <!--navigation-->
         <nav class="navbar">
 
-            <a href="./index.html">Home page</a>
+            <a href="./index.html">Home</a>
             <a href="./catalog.html">Catalog</a>
             <a href="./blog.html">Blog</a>
             <a href="./about.html">About</a>
@@ -30,21 +36,21 @@
         <nav class="toolbar">
 
             <a href="#" class="far fa-heart"></a>
-            <a href="cart.html" class="fas fa-dolly-flatbed"></a>
+            <a href="cart.html" class="fas fa-dolly-flatbed">(<span id="cart-amount">0</span>)</a>
             <a href="#" class="far fa-user"></a>
 
         </nav>
 
     </header>
 
-    <section class="breadcrumb-bg-light mt-5">
+    <section class="breadcrumb-bg-light mt-5 mb-4">
 
         <div class="container px-5 py-3">
 
             <div class="breadcrumb-container">
 
                 <div class="breadcrumb-title">
-                    About us
+                    About
                 </div>
 
                 <ul class="breadcrumb">
@@ -60,78 +66,232 @@
 
     <main>
 
-        <h1>About page</h1>
+        <div class="greeting-section px-7 mb-5">
+
+            <div class="owner-info px-5 py-3">
+
+                <h1 class="text-uppercase">Meet the owner, Viktoriia ✨</h1>
+                <p>
+                    Hello, lovely souls! 
+                </p>
+
+                <p>
+                    I'm Viktoriia, the heart and soul behind Hermosa. My journey with beauty and accessories began with a deep appreciation for elegance and self-expression. Growing up, I found solace and joy in the intricate details of life, especially in the allure of beautiful accessories. 💫
+                </p>
+
+                <p>
+                    When it came time to name my shop, I wanted something that encapsulated the essence of beauty and grace. That's why I chose "Hermosa," a word that means "beautiful" in Spanish. To me, Hermosa represents more than just physical beauty—it embodies the beauty of diversity, individuality, and the unique stories we each carry. 🌺
+                </p>
+
+                <p>
+                    Through Hermosa, I aim to celebrate the beauty in all its forms, offering a curated collection of accessories that inspire confidence and empower self-expression. Every piece in our collection is carefully selected to reflect the diverse beauty of the world around us. 💖
+                </p>
+
+                <p>
+                    Thank you for joining me on this journey. Together, let's embrace the beauty within and around us, one accessory at a time. 🌟 Gracias for your support and for choosing Hermosa as your destination for all things beautiful. 🌸
+                </p>
+
+            </div>
+
+            <img src="./images/my-photo.HEIC" alt="Viktoriia's photo" width="220" height="400" class="mr-5 ml-5 mt-5 mb-5">
+
+        </div>
+
+        <div class="quote py-5 mb-5">
+            <h2 id="materials" class="mb-3">Materials</h2>
+            <p>«Quality is never an accident; it is always the result of intelligent effort.»</p>
+        </div>
+
+        <div class="gold-material px-7 mt-5">
+
+            <div class="material-info px-5 py-5">
+
+                <h2 class="mb-3">Pure Elegance: Our Promise of Authenticity with Certified 'Green Gold'</h2>
+                <p>
+                    In our jewellery production, we're proud to offer genuine 14K gold jewellery that meets the highest standards of quality and ethics. 
+                </p>
+
+                <p>
+                    Our commitment extends beyond mere authenticity; we exclusively use certified 'green gold,' sourced from conflict-free regions and subjected to rigorous traceability measures. This ensures not only the purity of our gold but also a mining process that harms no one. 
+                </p>
+
+                <p>
+                    At Hermosa, we believe that true beauty shines brightest when it's paired with integrity and sustainability.
+                </p>
+
+            </div>
+
+            <img src="./images/gold.gif" alt="product image" width="380" height="400" loading="lazy">
+
+        </div>
+
+        <div class="silver-material px-7">
+
+            <div class="material-info px-5 py-5">
+
+                <h2 class="mb-3">Shine with Confidence: Our Commitment to Genuine 925 Silver</h2>
+                <p>
+                    Here at Hermosa, we take pride in the authenticity of our silver jewelry. We exclusively use genuine 925 silver, ensuring that each piece meets the highest standards of purity and quality. 
+                </p>
+
+                <p>
+                    Our commitment to excellence extends beyond mere authenticity; we meticulously source our silver from trusted suppliers, guaranteeing a transparent and ethical supply chain. 
+                </p>
+
+                <p>
+                    When you choose Hermosa, you can rest assured that your jewelry not only shines with beauty but also carries the mark of genuine craftsmanship and integrity.
+                </p>
+
+            </div>
+
+            <img src="./images/silver.gif" alt="product image" width="380" height="400" loading="lazy">
+
+        </div>
+
+        <div class="gems-material px-7 mb-5">
+
+            <div class="material-info px-5 py-5">
+
+                <h2 class="mb-3">Discover True Beauty: Our Guarantee of Natural Gemstones</h2>
+                <p>
+                    At Hermosa, we believe in the unparalleled allure of natural gemstones. Every exquisite piece of jewelry in our collection showcases authentic, naturally sourced gemstones, carefully handpicked from reputable suppliers worldwide. 
+                </p>
+
+                <p>
+                    Our unwavering commitment to authenticity ensures that each stone embodies its unique characteristics, ethically obtained and meticulously crafted. 
+                </p>
+
+                <p>
+                    Adorn yourself with Hermosa jewelry and experience the genuine essence of nature's finest creations, meticulously curated with care and integrity.
+                </p>
+
+            </div>
+
+            <img src="./images/gems.gif" alt="product image" width="380" height="400" loading="lazy">
+
+        </div>
+
+        <div class="warranty-section py-3">
+
+            <div class="quote">
+                <h2 id="warranty" class="mb-3">Jewellery Warranty</h2>
+                <p>For your assurance, we provide a warranty on all our jewellery</p>
+            </div>
+
+            <div class="services py-5 mb-3">
+
+                <div class="flex-container py-3 px-4 text-center mb-3">
+    
+                    <div class="svg-icon d-inline-block">
+                        
+                        <div class="svg-icon-item mb-3">
+                            <img src="./images/warranty.png"
+                            alt="Picture for warranty"
+                            height="54"
+                            width="54">
+                        </div>
+    
+                        <div class="text-start">
+                            <h3 class="emphasis mb-2">1-Year Warranty</h3>
+                            <p>To provide you with confidence in your purchase, every Hermosa jewelry product includes a 1-year warranty service (from the purchase date) provided by the original factory, safeguarding your jewelry from manufacturing defects.</p>
+                        </div>
+    
+                    </div>
+    
+                    <div class="svg-icon d-inline-block">
+                        
+                        <div class="svg-icon-item mb-3">
+                            <img src="./images/monitor.png"
+                            alt="Picture for monitor"
+                            height="54"
+                            width="54">
+                        </div>
+    
+                        <div class="text-start">
+                            <h3 class="emphasis mb-2">Effortless Warranty Management</h3>
+                            <p>After registration, you would be able to track all your jewellery warranties and request product care services (if needed) by logging into your account. This eliminates the need to keep invoices for warranty fulfilment, making your experience with us hassle-free.</p>
+                        </div>
+    
+                    </div>
+    
+                    <div class="svg-icon d-inline-block">
+                        
+                        <div class="svg-icon-item mb-3">
+                            <img src="./images/membership.png"
+                            alt="Picture for membership card"
+                            height="54"
+                            width="54">
+                        </div>
+    
+                        <div class="text-start">
+                            <h3 class="emphasis mb-2">Unlock Exclusive Benefits</h3>
+                            <p>To register a warranty for your jewellery requires you to open an account with Hermosa. If you are a new registrant, you will receive a 5% off for your first-time online purchase. Moreover, you can receive a birthday coupon each year.</p>
+                        </div>
+    
+                    </div>
+    
+                </div>
+
+                <div class="registration text-center">
+                    <p class="mb-4">Please click the <strong>“Start Registration”</strong> below to start your warranty registration. You will have 4 stages to go.</p>
+                    <a href="./account.html" class="btn">Start registration</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="customers" class="reviews py-5">
+
+            <div class="quote">
+                <h2 class="mb-3">Hermosa reviews</h2>
+                <p>Explore what customers have to say about our quality and craftsmanship.</p>
+            </div>
+
+            <div class="review-item px-2 mt-5 mx-7">
+                
+                <div class="review-header">
+                    <h3 class="author emphasis">Olya D.</h3>
+                </div>
+                <div class="review-content mb-3">
+                    <h3 class="mb-2">Sparkle Gemstone Ring</h3>
+                    <p>I wanted to get this as a pinky ring but the size 4 and 3 were still too loose. I wished they do halves sizes. But the size 4 ended up fitting on my ring finger so I kept that. I love how it looks and got mine initial which is a nice touch. It is my everyday ring that I hardly take off. Great purchase!</p>
+                </div>
+                <p class="date">01/04/24</p>
+                
+            </div>
+
+            <div class="review-item px-2 mt-5 mx-7">
+                
+                <div class="review-header">
+                    <h3 class="author emphasis">Sofiya</h3>
+                </div>
+                <div class="review-content mb-3">
+                    <h3 class="mb-2">LuxorCuff Bracelet</h3>
+                    <p>It’s very pretty and looks great on my white dresser. It’s very stylish.</p>
+                </div>
+                <p class="date">28/06/23</p>
+                
+            </div>
+
+            <div class="review-item px-2 mt-5 mx-7">
+                
+                <div class="review-header">
+                    <h3 class="author emphasis">Anna</h3>
+                </div>
+                <div class="review-content mb-3">
+                    <h3 class="mb-2">GleamLoop Hoops</h3>
+                    <p>I got these earrings for my birthday after dilly dallying about them for Black Friday. BIG MISTAKE. ALWAYS SNAG SOMETHING THAT STEALS YOUR HEART. They are the perfect size; I wear them every day. I’ve also slept with them in occasionally and it varies on whether or not I feel them/it disturbs my sleep. This may be different for others depending up.</p>
+                </div>
+                <p class="date">15/02/23</p>
+                
+            </div>
+
+        </div>
 
     </main>
 
-    <footer class="page-footer mb-3">
- 
-        <section class="footer-main">
-
-            <div class="footer-main-item">
-
-                <h2 class="footer-title">About</h2>
-                <ul>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Customers</a></li>
-                    <li><a href="#">Careers</a></li>
-                </ul>
-
-            </div>
-
-            <div class="footer-main-item">
-
-                <h2 class="footer-title">Resources</h2>
-                <ul>
-                    <li><a href="#">Docs</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">eBooks</a></li>
-                    <li><a href="#">Webinars</a></li>
-                </ul>
-
-            </div>
-
-            <div class="footer-main-item">
-
-                <h2 class="footer-title">Contact</h2>
-                <ul>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Sales</a></li>
-                    <li><a href="#">Advertise</a></li>
-                </ul>
-
-            </div>
-
-        </section>
-
-        <!-- Вправа 10 з домашнього завдання 5 -->
-        <section class="footer-social py-3">
-
-            <ul class="footer-social-list-unstyled">
-                <li><a href="https://www.facebook.com/facebookIndia"><i class="fab fa-facebook social-media"></i></a></li>
-                <li><a href="https://twitter.com/X"><i class="fab fa-twitter social-media"></i></a></li>
-                <li><a href="https://www.instagram.com/instagram/?hl=uk"><i class="fab fa-instagram social-media"></i></a></li>
-                <li><a href="https://github.com/TooMuchSoulless/TooMuchSoulless.github.io"><i class="fab fa-github social-media"></i></a></li>
-                <li><a href="https://www.linkedin.com/company/linkedin/"><i class="fab fa-linkedin social-media"></i></a></li>
-                <li><a href="https://www.youtube.com/@LofiGirl"><i class="fab fa-youtube social-media"></i></a></li>
-            </ul>
-
-        </section>
-
-        <!-- footer legal -->
-        <section class="footer-legal">
-
-            <ul class="footer-legal-list">
-                <li><a href="#">Terms &amp; Conditions</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#"> &copy; 2024 Copyright Shopaholic Inc.</a></li>
-            </ul>
-
-        </section>
-
-    </footer>
+    <script src="/js/app.js"></script>
 
 </body>
 </html>

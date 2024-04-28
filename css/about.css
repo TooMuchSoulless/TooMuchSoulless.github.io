@@ -1,0 +1,170 @@
+/* about.css */
+
+.greeting-section {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1.2px solid var(--anchor-active-color);
+    border-bottom: 1.2px solid var(--anchor-active-color);
+
+    > .owner-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        border-right: 0.5px solid var(--anchor-active-color);
+
+        .text-uppercase {
+            text-transform: uppercase;
+        }
+    }
+
+    > img {
+        border-top-left-radius: 250px;
+        border-top-right-radius: 250px;
+    }
+    
+}
+
+.quote {
+    max-width: 800px; 
+    margin: 0 auto;
+    text-align: center; 
+
+    > h2 {
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+
+    > p {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+}
+
+.gold-material, .gems-material {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1.2px solid var(--anchor-active-color);
+    border-bottom: 1.2px solid var(--anchor-active-color);
+
+    > .material-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        border-left: 0.5px solid var(--anchor-active-color);
+    }
+
+    > img {
+        order: -1;
+    }
+}
+
+.silver-material {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1.2px solid var(--anchor-active-color);
+    border-bottom: 1.2px solid var(--anchor-active-color);
+
+    > .material-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        border-right: 0.5px solid var(--anchor-active-color);
+    }
+
+}
+
+.warranty-section {
+    > .services {
+        .flex-container {
+            > .svg-icon {
+                .text-start{
+                    > h3 {
+                    font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.reviews {
+    border-top: 1.2px solid var(--anchor-active-color);
+
+    .review-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1.2px solid var(--anchor-active-color);
+        max-width: 1100px;
+
+        .date {
+            margin-top: 0;
+            margin-bottom: 0; 
+            align-self: flex-start;
+        }
+    }
+    
+    .review-header {
+        display: flex;
+        align-items: center;
+        padding-right: 0.8rem;
+    }
+    
+    .review-content {
+        flex-grow: 1;
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 60rem) {
+    .greeting-section {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        font-size: 0.5rem;
+        .owner-info {
+            padding: 1rem 1rem;
+        }
+        > img {
+            padding-top: 2rem;
+            border-top-left-radius: 550px;
+            border-top-right-radius: 550px;
+        }
+    }
+    .quote {
+        > p {
+            font-size: 1.5rem;
+        }
+    }
+    .gold-material, 
+    .silver-material, 
+    .gems-material {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        font-size: 0.5rem;
+        .owner-info {
+            padding: 1rem 1rem;
+        }
+        > img {
+            padding-top: 2rem;
+            width: 200px;
+            height: 400px;
+        }
+    }
+    .reviews {
+        .review-item {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+            font-size: 0.5rem;
+            > .review-header .author {
+                font-size: 0.8rem;
+            }
+            .review-content {
+                padding: 0.5rem 0.8rem;
+            }
+        }
+    }
+}
