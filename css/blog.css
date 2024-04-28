@@ -1,15 +1,99 @@
 /* blog.css */
 
-#blog .container {
-    display: grid;
-    gap: 1em;
-    grid-template-columns: auto 15rem;
+#blog {
+    .header {
+        text-align: center;
+        padding-left: auto;
+        padding-right: auto; 
+
+        > h1 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+    }
+
+    .main-new {
+        background-image: url(../images/main-new.jpg);
+        background-size: cover;
+        background-position: top center;
+        background-attachment: fixed;
+        height: 350px;
+        cursor: pointer;
+        border-radius: 12px;
+        > a {
+            color: var(--secondary-text-color);
+            > h4 {
+                padding-top: 3rem;
+                text-transform: uppercase;
+                font-weight: 300;
+            } 
+        }
+    }
+
+    .container {
+        display: grid;
+        gap: 1em;
+        grid-template-columns: auto minmax(35rem, 1fr);
+
+        .main {
+            background-image: url(../images/main.jpg);
+            background-size: cover;
+            background-position: top center;
+            background-attachment: fixed;
+            height: 350px;
+            cursor: pointer;
+            border-radius: 12px;
+            margin-left: 1.5rem;
+            > a {
+                color: var(--secondary-text-color);
+                > h4 {
+                    padding-top: 3rem;
+                    text-transform: uppercase;
+                    font-weight: 300;
+                } 
+            }
+        }
+        
+        .main-side {
+            background-image: url(../images/main-side.jpg);
+            background-size: cover;
+            background-position: top center;
+            background-attachment: fixed;
+            height: 350px;
+            cursor: pointer;
+            border-radius: 12px;
+            margin-right: 1.5rem;
+            > a {
+                text-align: right;
+                color: var(--secondary-text-color);
+                > h4 {
+                    padding-top: 3rem;
+                    text-transform: uppercase;
+                    font-weight: 300;
+                }
+
+            }
+
+        }
+
+    }
+
 }
 
-.blog-main {
-    height: 30ch;
-    border: 1px dotted red;
-}
-.blog-sidebar {
-    border: 1px dotted gold;
+@media (max-width: 40rem) {
+    #blog {
+        .main-new > a {
+        font-size: 0.8rem;
+        }
+
+        .container {
+            border-top: 1px solid var(--anchor-color);
+            border-bottom: 1px solid var(--anchor-color);
+            display: block;
+            .main {
+                margin-bottom: 3rem;
+            }
+        }
+    }
 }

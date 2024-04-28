@@ -14,37 +14,39 @@
     <header class="page-header mb-3">
 
         <!--brand-->
-        <a href="index.html" class="brand">Shopaholic</a>
+        <a href="index.html" class="brand"><img src="./logo.jpeg" alt="Logo" width="150"></a>
+        <label for="toggler">&nbsp;<i class="fas fa-bars"></i>&nbsp;</label>
+        <input type="checkbox" id="toggler">
 
         <!--navigation-->
         <nav class="navbar">
 
-            <a href="./index.html">Home page</a>
+            <a href="./index.html">Home</a>
             <a href="./catalog.html">Catalog</a>
             <a href="./blog.html">Blog</a>
             <a href="./about.html">About</a>
             <a href="./contact.html">Contact</a>
             
         </nav>
-
+        
         <nav class="toolbar">
 
             <a href="#" class="far fa-heart"></a>
-            <a href="cart.html" class="fas fa-dolly-flatbed"></a>
+            <a href="cart.html" class="fas fa-dolly-flatbed">(<span id="cart-amount">0</span>)</a>
             <a href="#" class="far fa-user"></a>
 
         </nav>
 
     </header>
 
-    <section class="breadcrumb-bg-light mt-5">
+    <section class="breadcrumb-bg-light mt-5 mb-4">
 
         <div class="container px-5 py-3">
 
             <div class="breadcrumb-container">
 
                 <div class="breadcrumb-title">
-                    Post list
+                    Blog
                 </div>
 
                 <ul class="breadcrumb">
@@ -60,90 +62,50 @@
 
     <main>
 
-        <h1>Blog page</h1>
+        <section id="blog" class="mb-3 mt-5">
+            
+            <div class="header quote">
+                <h1 class="slogan mb-3">Inspiration</h1>
+                <p class="mb-5">Your daily dose of fashion & jewellery inspiration, insider updates and news!</p>
+            </div>
 
+            <div class="main-new mr-5 ml-5 py-7 px-5">
+                <a href="#">
+                    <h4 class="mt-5">Trends</h4>
+                    <h2 class="py-3">Major fashion trends for 2024</h2>
+                    <p>Fashion trends come and go, but these are the fashion trends for 2024 that you aren't going to be able to live without!</p>
+                </a>
+            </div>
+
+            <div class="container mt-5 mb-5 py-3 px-4">
+
+                <div class="main px-5 py-5">
+
+                    <a href="#">
+                        <h4 class="mt-5">Gift inspiration</h4>
+                        <h2 class="py-3">First Mother's day gift</h2>
+                        <p>Looking for first Mother's day gift inspiration? We'll help you out by finding that perfect gift. Make her first Mother's Day unforgettable!</p>
+                    </a>
+
+                </div>
+
+                <div class="main-side px-5 py-5">
+
+                    <a href="#">
+                        <h4 class="mt-5">Gift inspiration</h4>
+                        <h2 class="py-3">5 Mother's Day Ideas</h2>
+                        <p>Looking for fun and original Mother's Day ideas? We've got you! These 6 ideas with things to do for Mother's day will make it a day to remember!</p>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+    
     </main>
 
-    <section id="blog" class="mb-3">
-
-        <div class="container py-3 px-4">
-
-            <div class="blog-main">Main</div>
-            <div class="blog-sidebar">Sidebar</div>
-
-        </div>
-
-    </section>
-
-    
-    <footer class="page-footer mb-3">
- 
-        <section class="footer-main">
-
-            <div class="footer-main-item">
-
-                <h2 class="footer-title">About</h2>
-                <ul>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Customers</a></li>
-                    <li><a href="#">Careers</a></li>
-                </ul>
-
-            </div>
-
-            <div class="footer-main-item">
-
-                <h2 class="footer-title">Resources</h2>
-                <ul>
-                    <li><a href="#">Docs</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">eBooks</a></li>
-                    <li><a href="#">Webinars</a></li>
-                </ul>
-
-            </div>
-
-            <div class="footer-main-item">
-
-                <h2 class="footer-title">Contact</h2>
-                <ul>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Sales</a></li>
-                    <li><a href="#">Advertise</a></li>
-                </ul>
-
-            </div>
-
-        </section>
-
-        <!-- Вправа 10 з домашнього завдання 5 -->
-        <section class="footer-social py-3">
-
-            <ul class="footer-social-list-unstyled">
-                <li><a href="https://www.facebook.com/facebookIndia"><i class="fab fa-facebook social-media"></i></a></li>
-                <li><a href="https://twitter.com/X"><i class="fab fa-twitter social-media"></i></a></li>
-                <li><a href="https://www.instagram.com/instagram/?hl=uk"><i class="fab fa-instagram social-media"></i></a></li>
-                <li><a href="https://github.com/TooMuchSoulless/TooMuchSoulless.github.io"><i class="fab fa-github social-media"></i></a></li>
-                <li><a href="https://www.linkedin.com/company/linkedin/"><i class="fab fa-linkedin social-media"></i></a></li>
-                <li><a href="https://www.youtube.com/@LofiGirl"><i class="fab fa-youtube social-media"></i></a></li>
-            </ul>
-
-        </section>
-
-        <!-- footer legal -->
-        <section class="footer-legal">
-
-            <ul class="footer-legal-list">
-                <li><a href="#">Terms &amp; Conditions</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#"> &copy; 2024 Copyright Shopaholic Inc.</a></li>
-            </ul>
-
-        </section>
-
-    </footer>
+    <script src="/js/app.js"></script>
 
 </body>
 </html>

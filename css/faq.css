@@ -94,4 +94,25 @@
     pointer-events: none;
 }
 
+@media (max-width: 40rem) {
+    .quote {
+        > p {
+            font-size: 1rem;
+        }
+    }
+    .q-container {
+        .q-main-title {
+            margin: 1rem;
+            padding: 1rem;
+        }
+        #product .q-item, 
+        #sizing .q-item, 
+        #shipping .q-item,
+        #returns .q-item,
+        #certification .q-item {
+            margin: 1rem;
+        }
+    }
+}
+
 
