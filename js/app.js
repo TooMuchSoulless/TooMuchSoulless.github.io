@@ -841,6 +841,22 @@ function main() {
 
 }
 
+(function initQItems() {
+    const arrows = document.querySelectorAll('.arrow');
+
+    arrows.forEach(function(arrow) {
+        arrow.addEventListener('click', function() {
+            const qTextInner = this.parentElement.querySelector('.q-text-inner');
+
+            qTextInner.classList.toggle('open');
+
+            const arrowImg = this.querySelector('img');
+            arrowImg.classList.toggle('open');
+        });
+    });
+    
+})();
+
 const template = document.createElement('template');
 
 template.innerHTML = `
@@ -860,10 +876,10 @@ template.innerHTML = `
             <div class="footer-main-item">
                 <h2 class="footer-title">CUSTOMER CARE</h2>
                 <ul>
-                    <li><a href="#">Sizing</a></li>
-                    <li><a href="#">Shipping</a></li>
-                    <li><a href="#">Returns</a></li>
-                    <li><a href="#">Certification</a></li>
+                    <li><a href="https://toomuchsoulless.github.io/faq.html#sizing">Sizing</a></li>
+                    <li><a href="https://toomuchsoulless.github.io/faq.html#shipping">Shipping</a></li>
+                    <li><a href="https://toomuchsoulless.github.io/faq.html#returns">Returns</a></li>
+                    <li><a href="https://toomuchsoulless.github.io/faq.html#certification">Certification</a></li>
                 </ul>
             </div>
 
@@ -871,7 +887,7 @@ template.innerHTML = `
                 <h2 class="footer-title">SOCIALS</h2>
                 <ul>
                     <li><a href="https://www.instagram.com/instagram/?hl=uk"><i class="fab fa-instagram social-media"></i> Instagram</a></li>
-                    <li><a href="#"><i class="fab fa-facebook social-media"></i> Facebook</a></li>
+                    <li><a href="https://www.facebook.com/facebookIndia"><i class="fab fa-facebook social-media"></i> Facebook</a></li>
                     <li><a href="https://www.pinterest.com.au/"><i class="fab fa-pinterest"></i> Pinterest</a></li>
                     <li><a href="./exercises/index.html">My Exercises</a></li>
                 </ul>

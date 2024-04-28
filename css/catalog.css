@@ -2,6 +2,9 @@
 
 .main-title {
     margin-left: 5rem;
+    max-width: 190px;
+    border-bottom: 1px solid var(--anchor-color);
+    padding-bottom: 0.5rem;
 }
 
 .best-products {
