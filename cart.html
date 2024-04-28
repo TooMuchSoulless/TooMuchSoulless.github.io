@@ -7,50 +7,54 @@
 
     <link rel="stylesheet" href="./css/main.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     
     <header class="page-header mb-3">
 
         <!--brand-->
-        <a href="index.html" class="brand">Shopaholic</a>
+        <a href="index.html" class="brand"><img src="./logo.jpeg" alt="Logo" width="150"></a>
         <label for="toggler">&nbsp;<i class="fas fa-bars"></i>&nbsp;</label>
         <input type="checkbox" id="toggler">
 
         <!--navigation-->
         <nav class="navbar">
 
-            <a href="./index.html">Home page</a>
+            <a href="./index.html">Home</a>
             <a href="./catalog.html">Catalog</a>
             <a href="./blog.html">Blog</a>
             <a href="./about.html">About</a>
             <a href="./contact.html">Contact</a>
             
         </nav>
-
+        
         <nav class="toolbar">
 
             <a href="#" class="far fa-heart"></a>
-            <a href="#" class="fas fa-dolly-flatbed">(<span id="cart-amount">0</span>)</a>
+            <a href="cart.html" class="fas fa-dolly-flatbed">(<span id="cart-amount">0</span>)</a>
             <a href="#" class="far fa-user"></a>
 
         </nav>
 
     </header>
 
-    <section class="breadcrumb-bg-light mt-5">
+    <section class="breadcrumb-bg-light mt-5 mb-4">
 
         <div class="container px-5 py-3">
 
             <div class="breadcrumb-container">
 
                 <div class="breadcrumb-title">
-                    Shopping cart
+                    Shopping Cart
                 </div>
 
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                    <li class="breadcrumb-item active">Your cart</li>
+                    <li class="breadcrumb-item active">Your Cart</li>
                 </ul>
 
             </div>
@@ -107,7 +111,7 @@
                                 <form action="#">
                                     
                                     <div class="input-group">
-                                        <input class="form-control mb-1" type="text" placeholder="Enter your coupon">
+                                        <input class="form-control mb-2" type="text" placeholder="Enter coupon">
                                         <button class="btn btn-primary mb-3" type="submit"> <i class="fas fa-gift"></i>&nbsp;Apply coupon</button>
 
                                         <button class="btn btn-primary checkout"> <i class="fas fa-credit-card"></i>&nbsp;Checkout</button>
@@ -135,11 +139,11 @@
         
         <a href="#!" title="Close" class="close fas fa-times"></a>
 
-        <div class="dialog-main">
+        <div class="dialog-main px-3 py-3">
 
-            <h2>Something went wrong</h2>
-            <p class="message"></p>
-            <button>Login or sign up</button>
+            <h2 class="mb-3">Something went wrong</h2>
+            <p class="message mb-3"></p>
+            <button class="btn" onclick="window.location.href = 'https://toomuchsoulless.github.io/user.html';">Login or sign up</button>
 
         </div>
 

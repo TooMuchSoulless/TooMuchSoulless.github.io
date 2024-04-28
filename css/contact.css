@@ -61,3 +61,17 @@
 
     }
 }
+
+@media (max-width: 60rem) {
+    #contact {
+        .container {
+            display: block;
+            margin: 1rem;
+            padding: 1rem;
+            .contact-sidebar img {
+                margin-left: auto; 
+                display: block;
+            }
+        }
+    }
+}

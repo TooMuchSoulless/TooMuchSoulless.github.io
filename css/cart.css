@@ -14,12 +14,16 @@
 
     & .header {
         font-weight: 600;
-        color: white;
-        background-color: rgb(147, 107, 137);
+        color: var(--secondary-text-color);
+        background-color: var(--anchor-color);
     }
 
     .table {
         display: block;
+    }
+
+    a {
+        color: var(--anchor-color);
     }
 
     .row {
@@ -58,7 +62,7 @@
 }
 
 .cart-sidebar {
-    border: 1px dotted gold;
+    
 }
 
 .card {
@@ -105,17 +109,18 @@
     padding: 0;
 }
 
-.form-cotrol {
+.form-control {
     display: block;
-    width: 90%;
     padding: 0.375rem 0.25rem;
-    background-color: white;
-    border: 1px solid lightgrey;
+    background-color: var(--secondary-text-color);
+    border: 1px solid var(--tertiary-text-color);
+    width: 150px;
 }
 
 .input-group {
     display: flex;
     flex-wrap: wrap;
+    flex-grow: 1;
 }
 
 .input-group div {
@@ -124,14 +129,18 @@
     flex: 1;
 }
 
+.form-cotrol {
+    margin-right: 2rem;
+}
+
 .form-control:focus {
-    border-color: antiquewhite;
+    border-color: var(--secondary-text-color);
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgb(220 177 74 / 0.25);
+    box-shadow: 0 0 0 0.25rem rgb(47 47 47 / 0.25);
 }
 
 .form-control::placeholder {
-    color: gainsboro;
+    color: var(--tertiary-text-color);
     opacity: 1;
 }
 
