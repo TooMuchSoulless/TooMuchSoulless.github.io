@@ -1,0 +1,26 @@
+#root {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.image {
+  width: 350px;
+  height: 350px;
+  margin-right: 2rem;
+}
+
+.header {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.post-title {
+  margin: 3rem auto;
+}
+
+.post-main {
+  display: flex;
+  align-items: center;
+}
