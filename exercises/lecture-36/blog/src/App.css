@@ -1,0 +1,22 @@
+#root {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.image {
+  width: 350px;
+  height: 350px;
+  margin-right: 20px; 
+}
+
+.post {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+}
+
+.post-footer {
+  flex: 1;
+}
