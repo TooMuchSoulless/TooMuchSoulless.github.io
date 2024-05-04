@@ -28,6 +28,10 @@
   flex: 1;
 }
 
+.last-link {
+  margin-right: 1rem;
+}
+
 #like {
   margin-top: 2rem;
 }

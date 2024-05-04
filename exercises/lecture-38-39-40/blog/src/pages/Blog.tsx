@@ -1,5 +1,6 @@
 import { useContext, createContext, ReactNode } from 'react';
 import Post from '../components/Post';
+import {Outlet, Link} from "react-router-dom";
 
 const BlogContext = createContext("");
 
@@ -27,7 +28,9 @@ function Header() {
                     <BlogInfo />
                 </a>
             </div>
-            <a href="#" className="text-1xl text-gray-900 mr-3 hover:text-white">See All</a>
+            <Link to={`blog`} className="text-1xl text-gray-900 hover:text-white">See All</Link>
+            <Link to={`about`} className="text-1xl text-gray-900 hover:text-white">About</Link>
+            <Link to={`contact`} className="text-1xl text-gray-900 hover:text-white last-link">Contact</Link>
         </div>
     );
 }  
@@ -38,6 +41,7 @@ function Blog() {
         <BlogContext.Provider value={blogName}>
             <Layout>
                 <Post />
+                <Outlet />
             </Layout>
         </BlogContext.Provider>
     );

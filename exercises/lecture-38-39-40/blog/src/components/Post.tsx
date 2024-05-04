@@ -17,7 +17,7 @@ const Post = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://my-json-server.typicode.com/TooMuchSoulless/db1/posts/2');
+        const response = await fetch('https://my-json-server.typicode.com/TooMuchSoulless/db1/posts/1');
         const data = await response.json();
         setPost(data);
       } catch (error) {
@@ -28,25 +28,15 @@ const Post = () => {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    const likeButton = document.getElementById('like');
-    if (likeButton) {
-      likeButton.addEventListener('click', likeThis);
-      return () => {
-        likeButton.removeEventListener('click', likeThis);
-      };
-    }
-  }, [likeThis]);
-
   return (
     <article className='post'>
     <div className='cover-container'>
-      <img src={post.cover} alt={post.title} className='image'/>
+      <img src={post.cover} alt={post.title} className='image rounded-lg shadow-xl'/>
     </div>
     <div className='post-footer'>
       <h3 className='title'>{post.title} <br/><span>Стаття №</span> {post.id}</h3>
       <p>{post.content}</p>
-      <button id='like'>
+      <button id='like' onClick={likeThis}>
       Like this post <strong>{likes}</strong>
       </button>
     </div>
