@@ -1,0 +1,33 @@
+#root {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.image {
+  width: 500px;
+  height: 500px;
+  margin-right: 20px; 
+}
+
+.post {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  color: darkorchid;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 2rem;
+}
+
+.post-footer {
+  flex: 1;
+}
+
+#like {
+  margin-top: 2rem;
+}
