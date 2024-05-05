@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import {
@@ -31,11 +31,8 @@ export default function Chat() {
             sender: "user",
             position: 'single',
         };
-        setMessages((prevMessages) => {
-            const updatedMessages = [...prevMessages, newMessage];
-            setIsTyping(true);
-            return updatedMessages;
-        });
+        setMessages((prevMessages) => [...prevMessages, newMessage]);
+        setIsTyping(true);
     
         try {
             const response = await processMessageToChatGPT([...messages, newMessage]);
@@ -91,15 +88,6 @@ export default function Chat() {
             throw new Error('Failed to process message: ' + error.message);
         }
     }  
-    
-    useEffect(() => {
-        if (messages.length > 0) {
-            const lastMessage = messages[messages.length - 1];
-            if (lastMessage.sender === 'user') {
-                processMessageToChatGPT(messages);
-            }
-        }
-    }, [messages]);
 
     return (
         <div className="App flex flex-col items-center justify-center h-screen mt-12 mb-6">
