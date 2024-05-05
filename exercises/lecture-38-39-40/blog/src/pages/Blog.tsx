@@ -30,7 +30,8 @@ function Header() {
             </div>
             <Link to={`blog`} className="text-1xl text-gray-900 hover:text-white">See All</Link>
             <Link to={`about`} className="text-1xl text-gray-900 hover:text-white">About</Link>
-            <Link to={`contact`} className="text-1xl text-gray-900 hover:text-white last-link">Contact</Link>
+            <Link to={`contact`} className="text-1xl text-gray-900 hover:text-white">Contact</Link>
+            <Link to={`chat`} className="text-1xl text-gray-900 hover:text-white last-link">Chat</Link>
         </div>
     );
 }  

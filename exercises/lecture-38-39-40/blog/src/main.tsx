@@ -2,10 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 
-import Blog from './pages/Blog.tsx'
-import About from './pages/About.tsx'
-import Contact from './pages/Contact.tsx'
-import PostItem from './pages/PostItem.tsx'
+import Blog from './pages/Blog'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Chat from './pages/Chat'
+import PostItem from './pages/PostItem'
 
 import {
   createBrowserRouter,
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />
+      },
+      {
+        path: "chat",
+        element: <Chat />
       },
     ]
   },
